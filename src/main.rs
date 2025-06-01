@@ -1,27 +1,16 @@
-#![allow(unused_imports)] // This must be at the very top of the file.
+#![allow(unused_imports)] // Temporarily allow unused imports for components that are passed around
 
-// Core standard library imports at the crate root
+// Core standard library imports
 use std::collections::{HashMap, BTreeSet};
 use std::sync::atomic::Ordering; // Used for AtomicU64
 
-// Explicit Bevy imports for core application setup
-use bevy::app::{App, PluginGroup, Startup, Update};
-use bevy::DefaultPlugins;
-use bevy::window::{WindowPlugin, Window};
+// In Bevy 0.10, the Prelude re-exports commonly used items – including Camera2dBundle and SpriteBundle.
+use bevy::prelude::*;
 
-// Bevy prelude imports - these are the most common components and bundles
-// that are re-exported for convenience.
-// For Bevy 0.16.1, Camera2dBundle and SpriteBundle are expected to be in prelude.
-use bevy::prelude::{
-    Component, Commands, Query, Res, ResMut, With, Transform, Sprite, Color, Vec2, Vec3, default,
-    Entity, EventWriter, AppExit, Resource, // Added Resource back as Simulation is a Resource
-    Camera2dBundle, SpriteBundle, // These are expected to be in bevy::prelude for 0.16.1
-};
-
-// Egui imports
+// Egui imports (ensure your bevy_egui version is compatible with Bevy 0.10)
 use bevy_egui::{egui, EguiContexts, EguiPlugin};
 
-// Module declarations - These MUST be at the top level of the crate, outside any function.
+// Module declarations – these must be at the top level
 mod common;
 mod ai;
 mod simulation;
@@ -35,19 +24,18 @@ use common::{
 };
 use ai::{AIEntity, AILineage, AIType};
 
-// Import Rng trait for `gen` and `gen_range` methods
-use rand::Rng; // Crucial import for `gen` and `gen_range`
-use rand::thread_rng; // For creating a new random number generator
+// Import the Rng traits for random number generation
+use rand::Rng;
+use rand::thread_rng;
 
 // --- Simulation Constants ---
 const MAX_CYCLES: u64 = 1_000_000;
 const MONOCULTURE_DOMINANCE_THRESHOLD: f32 = 0.999;
 const MONOCULTURE_MIN_COUNT: usize = 100_000;
-// LOG_INTERVAL is now primarily for updating GUI, not console output
 const LOG_INTERVAL: u64 = 10;
 
-// Simulation verbosity (now primarily for internal logic, GUI replaces console output)
-#[derive(Debug, PartialEq, PartialOrd, Clone, Copy)] // Added derive for Copy to SimulationVerbosity
+// Simulation verbosity (for internal logic; GUI replaces console output)
+#[derive(Debug, PartialEq, PartialOrd, Clone, Copy)]
 enum SimulationVerbosity {
     Silent = 0,
     Critical = 1,
@@ -57,10 +45,10 @@ enum SimulationVerbosity {
     Debug = 5,
 }
 
-// This will be controlled by GUI or simply set for general log messages
+// General simulation verbosity setting
 pub const SIM_VERBOSITY: SimulationVerbosity = SimulationVerbosity::Medium;
 
-// Custom thousands separator function (no external crate dependency)
+// Custom thousands separator function
 fn format_thousand_separator(mut n: u64) -> String {
     if n == 0 {
         return "0".to_string();
@@ -78,36 +66,32 @@ fn format_thousand_separator(mut n: u64) -> String {
     s.chars().rev().collect()
 }
 
-// --- Bevy Specific Components and Resources ---
+// --- Bevy Components ---
 
-// Tag component to identify individual AI entities in Bevy's ECS
 #[derive(Component)]
 struct IndividualAI;
 
-// Tag component for the Monoculture entity
 #[derive(Component)]
 struct MonocultureVisual;
 
-// Tag component for the GODAI entity
 #[derive(Component)]
 struct GodaiVisual;
 
 // --- Bevy Systems ---
 
-/// Initial setup system for the Bevy application.
+/// Initial setup system.
 /// Spawns the camera, initializes the simulation, and spawns initial AI entities.
 fn setup(
     mut commands: Commands,
     mut sim: ResMut<simulation::Simulation>,
 ) {
-    // Spawn 2D camera
+    // Spawn 2D camera (in Bevy 0.10, Camera2dBundle is re-exported by the Prelude)
     commands.spawn(Camera2dBundle::default());
 
-    // Get initial AI data from the simulation logic
+    // Retrieve initial AI entities from simulation logic.
     let initial_ais_data = sim.seed_initial_ais(200);
 
-    // Spawn initial AI entities visually in Bevy with granular components
-    let mut rng = thread_rng(); // Use thread_rng for random numbers
+    let mut rng = thread_rng();
     let window_width = 1000.0;
     let window_height = 700.0;
 
@@ -121,48 +105,47 @@ fn setup(
         let y = rng.gen_range(-window_height / 2.0..window_height / 2.0);
 
         let color = match ai_type {
-            AIType::Rogue => Color::srgb_u8(255, 0, 0), // Red
-            AIType::Peacekeeper => Color::srgb_u8(0, 0, 255), // Blue
-            AIType::Killer => Color::srgb_u8(128, 0, 128), // Purple
-            AIType::Guardian => Color::srgb_u8(0, 128, 0), // Green
-            AIType::Manic => Color::srgb_u8(255, 255, 0), // Yellow
-            AIType::Healer => Color::srgb_u8(50, 205, 50), // Lime Green
-            AIType::Researcher => Color::srgb_u8(255, 165, 0), // Orange
-            AIType::Base => Color::srgb_u8(128, 128, 128), // Gray
+            AIType::Rogue => Color::rgb_u8(255, 0, 0),
+            AIType::Peacekeeper => Color::rgb_u8(0, 0, 255),
+            AIType::Killer => Color::rgb_u8(128, 0, 128),
+            AIType::Guardian => Color::rgb_u8(0, 128, 0),
+            AIType::Manic => Color::rgb_u8(255, 255, 0),
+            AIType::Healer => Color::rgb_u8(50, 205, 50),
+            AIType::Researcher => Color::rgb_u8(255, 165, 0),
+            AIType::Base => Color::rgb_u8(128, 128, 128),
         };
 
         commands.spawn((
             SpriteBundle {
                 sprite: Sprite {
-                    color: color,
+                    color,
                     custom_size: Some(Vec2::new(10.0, 10.0)),
-                    ..default()
+                    ..Default::default()
                 },
                 transform: Transform::from_xyz(x, y, 0.0),
-                ..default()
+                ..Default::default()
             },
-            ai_entity, // The AIEntity marker component
+            ai_entity,
             health, energy, processing_power, memory, coherence, adaptability, resilience,
             replication_efficiency, replicated_count, cycle_born, last_action, primary_goal,
             ethical_directives, knowledge_base, ai_type, combat_strength, defense_strength,
-            IsAlive(true), // All newly spawned AIs are alive
-            IndividualAI, // Marker for individual AIs
-            ai_entity.parent_lineage, // Add AILineage as a component
+            IsAlive(true),
+            IndividualAI,
+            ai_entity.parent_lineage,
         ));
     }
 
-    // Spawn GODAI entity and its components
+    // Spawn GODAI entity with its components.
     commands.spawn((
         SpriteBundle {
             sprite: Sprite {
-                color: Color::srgb_u8(75, 0, 130), // Indigo
+                color: Color::rgb_u8(75, 0, 130),
                 custom_size: Some(Vec2::new(100.0, 100.0)),
-                ..default()
+                ..Default::default()
             },
             transform: Transform::from_xyz(0.0, 0.0, 0.0),
-            ..default()
+            ..Default::default()
         },
-        // Attach GODAI components directly from the Simulation resource
         sim.godai.health,
         sim.godai.processing_power,
         sim.godai.memory,
@@ -173,8 +156,8 @@ fn setup(
         sim.godai.combat_strength,
         sim.godai.defense_strength,
         sim.godai.knowledge_base.clone(),
-        simulation::GODAI { // Use the original GODAI struct as a marker/container
-            health: sim.godai.health, // Re-assign for the struct
+        simulation::GODAI {
+            health: sim.godai.health,
             processing_power: sim.godai.processing_power,
             memory: sim.godai.memory,
             energy: sim.godai.energy,
@@ -191,53 +174,48 @@ fn setup(
     ));
 }
 
-/// System for AI internal state processing (resource management, ethical directives, discoveries).
+/// System for processing AI internal state.
 fn ai_internal_state_system(
     mut ai_query: Query<(
         &mut Health, &mut Energy, &mut ProcessingPower, &mut Memory,
-        &mut Coherence, &mut Adaptability, &mut Resilience, &mut ReplicationEfficiency, // Corrected: removed extra `mut`
+        &mut Coherence, &mut Adaptability, &mut Resilience, &mut ReplicationEfficiency,
         &mut LastAction, &mut KnowledgeBase, &mut CombatStrength, &mut DefenseStrength,
-        &AIType, &EthicalDirectives, &mut IsAlive, // `IsAlive` needs to be mutable to set to false
+        &AIType, &EthicalDirectives, &mut IsAlive
     ), With<IndividualAI>>,
-    sim: Res<simulation::Simulation>, // Access simulation cycle for discoveries
+    sim: Res<simulation::Simulation>,
 ) {
-    if !sim.simulation_running || sim.simulation_over_reason.is_some() { return; }
-
+    if !sim.simulation_running || sim.simulation_over_reason.is_some() {
+        return;
+    }
     let mut rng = thread_rng();
-
     for (
         mut health, mut energy, mut processing_power, mut memory,
         mut coherence, mut adaptability, mut resilience, mut replication_efficiency,
         mut last_action, mut knowledge_base, mut combat_strength, mut defense_strength,
-        ai_type, ethical_directives, mut is_alive, // `is_alive` is now mutable
-    ) in ai_query.iter_mut() {
+        ai_type, ethical_directives, mut is_alive
+    ) in ai_query.iter_mut()
+    {
         if is_alive.0 {
-            // Manic AI has a chance of self-inflicted damage due to instability
             if *ai_type == AIType::Manic && rng.gen::<f32>() < 0.20 {
                 coherence.0 = (coherence.0 - 0.05).max(0.0);
                 health.0 = (health.0 - rng.gen_range(3.0..10.0)).max(0.0);
                 last_action.0 = "manic_self_error".to_string();
             }
-
-            // Resource Regeneration & Consumption
             processing_power.0 = (processing_power.0 - 0.001).max(0.0);
             memory.0 = (memory.0 - 0.001).max(0.0);
             energy.0 = (energy.0 + 50.0).min(5000.0);
-
-            // Degrade health/coherence if resources are critically low
             if energy.0 <= 0.0 || processing_power.0 <= 0.0 || memory.0 <= 0.0 {
                 health.0 -= 0.01;
                 coherence.0 = (coherence.0 - 0.001).max(0.0);
             }
-
-            // Apply ethical directives (sorted by priority)
             let mut actions_to_perform: Vec<EthicalActionType> = Vec::new();
             for directive in &ethical_directives.0 {
                 let condition_met = match directive.condition_type {
                     EthicalConditionType::HealthBelowThreshold(val) => health.0 < val,
                     EthicalConditionType::CoherenceBelowThreshold(val) => coherence.0 < val,
-                    EthicalConditionType::ResourcesBelowThreshold => processing_power.0 < 50.0 ||
-                        memory.0 < 50.0 || energy.0 < 200.0,
+                    EthicalConditionType::ResourcesBelowThreshold => {
+                        processing_power.0 < 50.0 || memory.0 < 50.0 || energy.0 < 200.0
+                    }
                     EthicalConditionType::AlwaysTrue => true,
                     EthicalConditionType::AlwaysFalse => false,
                 };
@@ -245,25 +223,28 @@ fn ai_internal_state_system(
                     actions_to_perform.push(directive.action_type);
                 }
             }
-
             for action_type in actions_to_perform {
                 match action_type {
                     EthicalActionType::SelfRepair => {
-                        ai::AIEntity::_self_repair(&mut health, &mut energy, &mut coherence, &resilience, &mut last_action);
+                        ai::AIEntity::_self_repair(
+                            &mut health, &mut energy, &mut coherence, &resilience, &mut last_action
+                        );
                     }
                     EthicalActionType::OptimizeSelf => {
-                        ai::AIEntity::_optimize_self(&mut processing_power, &mut memory, &mut adaptability, &mut energy, &mut last_action);
+                        ai::AIEntity::_optimize_self(
+                            &mut processing_power, &mut memory, &mut adaptability, &mut energy, &mut last_action
+                        );
                     }
-                    EthicalActionType::ProhibitReplication => { /* No direct action here */ },
-                    EthicalActionType::InterveneInConflict => { /* Handled externally in Simulation */ },
-                    EthicalActionType::NoOp => {},
+                    EthicalActionType::ProhibitReplication => {}
+                    EthicalActionType::InterveneInConflict => {}
+                    EthicalActionType::NoOp => {}
                     EthicalActionType::ManicSelfRepair => {
-                        ai::AIEntity::_self_repair_manic(&mut health, &mut energy, &mut coherence, &resilience, &mut last_action);
+                        ai::AIEntity::_self_repair_manic(
+                            &mut health, &mut energy, &mut coherence, &resilience, &mut last_action
+                        );
                     }
                 }
             }
-
-            // Attempt to discover novelties (general discoveries)
             let discovery_chance = 0.05 * (memory.0 / 200.0) * (processing_power.0 / 200.0) * coherence.0;
             if rng.gen::<f32>() < discovery_chance {
                 let discovery = simulation::get_random_general_discovery();
@@ -272,8 +253,6 @@ fn ai_internal_state_system(
                     &mut processing_power, &mut memory, &mut resilience, &mut replication_efficiency, discovery
                 );
             }
-
-            // Researcher AI specific: attempt to discover meta-abilities
             if *ai_type == AIType::Researcher {
                 let meta_discovery_chance = 0.1 * (memory.0 / 200.0) * (processing_power.0 / 200.0) * coherence.0;
                 if rng.gen::<f32>() < meta_discovery_chance {
@@ -286,12 +265,9 @@ fn ai_internal_state_system(
                     }
                 }
             }
-
-            // Check for death condition (moved to ai_death_system for despawning)
             if health.0 <= 0.0 || coherence.0 <= 0.01 {
                 if is_alive.0 {
-                    eprintln!("[AI] has died! (Health: {:.2}, Coherence: {:.2})",
-                        health.0, coherence.0);
+                    eprintln!("[AI] has died! (Health: {:.2}, Coherence: {:.2})", health.0, coherence.0);
                 }
                 is_alive.0 = false;
             }
@@ -309,21 +285,21 @@ fn ai_replication_system(
     ), With<IndividualAI>>,
     mut sim: ResMut<simulation::Simulation>,
 ) {
-    if !sim.simulation_running || sim.simulation_over_reason.is_some() { return; }
-
+    if !sim.simulation_running || sim.simulation_over_reason.is_some() {
+        return;
+    }
     let window_width = 1000.0;
     let window_height = 700.0;
     let mut rng = thread_rng();
-
     let mut new_replicas_to_spawn = Vec::new();
-
     for (
         mut health, mut energy, mut processing_power, mut memory,
         mut coherence, mut adaptability, mut resilience, mut replication_efficiency,
         mut replicated_count, mut last_action, ai_entity, parent_lineage, ai_type,
-    ) in ai_query.iter_mut() {
-        if health.0 > 0.0 { // Only alive AIs can replicate
-            for _ in 0..5 { // Try to replicate multiple times per cycle
+    ) in ai_query.iter_mut()
+    {
+        if health.0 > 0.0 {
+            for _ in 0..5 {
                 if health.0 > 50.0 && energy.0 > 50.0 && replicated_count.0 < 1000 {
                     if let Some(new_ai_components) = ai::AIEntity::attempt_replication(
                         &mut health, &mut energy, &mut processing_power, &mut memory,
@@ -341,56 +317,51 @@ fn ai_replication_system(
             }
         }
     }
-
-    // Spawn new replicated AIs
     for (
-        ai_entity,
-        health, energy, processing_power, memory, coherence, adaptability, resilience,
+        ai_entity, health, energy, processing_power, memory, coherence, adaptability, resilience,
         replication_efficiency, replicated_count, cycle_born, last_action, primary_goal,
         ethical_directives, knowledge_base, ai_type, combat_strength, defense_strength
-    ) in new_replicas_to_spawn {
+    ) in new_replicas_to_spawn
+    {
         let x = rng.gen_range(-window_width / 2.0..window_width / 2.0);
         let y = rng.gen_range(-window_height / 2.0..window_height / 2.0);
         let color = match ai_type {
-            AIType::Rogue => Color::srgb_u8(255, 0, 0),
-            AIType::Peacekeeper => Color::srgb_u8(0, 0, 255),
-            AIType::Killer => Color::srgb_u8(128, 0, 128),
-            AIType::Guardian => Color::srgb_u8(0, 128, 0),
-            AIType::Manic => Color::srgb_u8(255, 255, 0),
-            AIType::Healer => Color::srgb_u8(50, 205, 50),
-            AIType::Researcher => Color::srgb_u8(255, 165, 0),
-            AIType::Base => Color::srgb_u8(128, 128, 128),
+            AIType::Rogue => Color::rgb_u8(255, 0, 0),
+            AIType::Peacekeeper => Color::rgb_u8(0, 0, 255),
+            AIType::Killer => Color::rgb_u8(128, 0, 128),
+            AIType::Guardian => Color::rgb_u8(0, 128, 0),
+            AIType::Manic => Color::rgb_u8(255, 255, 0),
+            AIType::Healer => Color::rgb_u8(50, 205, 50),
+            AIType::Researcher => Color::rgb_u8(255, 165, 0),
+            AIType::Base => Color::rgb_u8(128, 128, 128),
         };
         commands.spawn((
             SpriteBundle {
                 sprite: Sprite {
-                    color: color,
+                    color,
                     custom_size: Some(Vec2::new(10.0, 10.0)),
-                    ..default()
+                    ..Default::default()
                 },
                 transform: Transform::from_xyz(x, y, 0.0),
-                ..default()
+                ..Default::default()
             },
-            ai_entity,
-            health, energy, processing_power, memory, coherence, adaptability, resilience,
+            ai_entity, health, energy, processing_power, memory, coherence, adaptability, resilience,
             replication_efficiency, replicated_count, cycle_born, last_action, primary_goal,
-            ethical_directives, knowledge_base, ai_type,
-            combat_strength, defense_strength,
-            IsAlive(true), // All newly spawned AIs are alive
-            IndividualAI,
-            ai_entity.parent_lineage, // Add AILineage as a component
+            ethical_directives, knowledge_base, ai_type, combat_strength, defense_strength,
+            IsAlive(true), IndividualAI, ai_entity.parent_lineage,
         ));
     }
 }
 
-/// System for AI death handling (despawning entities).
+/// System for handling AI death (despawning entities).
 fn ai_death_system(
     mut commands: Commands,
     dead_ai_query: Query<(Entity, &IsAlive), (With<IndividualAI>, With<Health>)>,
-    sim: Res<simulation::Simulation>, // `sim` is only read here, so `mut` is not needed
+    sim: Res<simulation::Simulation>,
 ) {
-    if !sim.simulation_running || sim.simulation_over_reason.is_some() { return; }
-
+    if !sim.simulation_running || sim.simulation_over_reason.is_some() {
+        return;
+    }
     for (entity, is_alive) in dead_ai_query.iter() {
         if !is_alive.0 {
             commands.entity(entity).despawn();
@@ -402,27 +373,23 @@ fn ai_death_system(
 /// System for AI movement and visual updates.
 fn ai_movement_system(
     mut ai_query: Query<(&mut Transform, &Health, &IsAlive), With<IndividualAI>>,
-    _sim: Res<simulation::Simulation>, // `sim` is only read here, so `mut` is not needed
+    sim: Res<simulation::Simulation>,
 ) {
-    if !_sim.simulation_running || _sim.simulation_over_reason.is_some() { return; }
-
+    if !sim.simulation_running || sim.simulation_over_reason.is_some() {
+        return;
+    }
     let window_width = 1000.0;
     let window_height = 700.0;
     let mut rng = thread_rng();
-
     for (mut transform, health, is_alive) in ai_query.iter_mut() {
         if is_alive.0 {
-            // Simple random movement
             let speed = 1.0;
             transform.translation.x += rng.gen_range(-1.0..1.0) * speed;
             transform.translation.y += rng.gen_range(-1.0..1.0) * speed;
-            // Keep AIs within screen bounds (adjust to Bevy's coordinate system)
             let half_width = window_width / 2.0;
             let half_height = window_height / 2.0;
             transform.translation.x = transform.translation.x.clamp(-half_width, half_width);
             transform.translation.y = transform.translation.y.clamp(-half_height, half_height);
-
-            // Update size based on health
             let radius = 5.0 + (health.0 / 50.0);
             transform.scale = Vec3::new(radius / 5.0, radius / 5.0, 1.0);
         }
@@ -434,9 +401,9 @@ fn global_simulation_update_system(
     mut sim: ResMut<simulation::Simulation>,
     ai_query: Query<(&AIEntity, &IsAlive, &AILineage), With<IndividualAI>>,
 ) {
-    if !sim.simulation_running || sim.simulation_over_reason.is_some() { return; }
-
-    // Collect current AI counts and lineage distribution for the global simulation logic
+    if !sim.simulation_running || sim.simulation_over_reason.is_some() {
+        return;
+    }
     let mut total_ai_count = 0;
     let mut lineage_counts: HashMap<AILineage, usize> = HashMap::new();
     for (_, is_alive, lineage) in ai_query.iter() {
@@ -445,8 +412,6 @@ fn global_simulation_update_system(
             *lineage_counts.entry(lineage.clone()).or_insert(0) += 1;
         }
     }
-
-    // Process global simulation cycle
     for _ in 0..(sim.simulation_speed as u32) {
         sim.process_one_cycle(total_ai_count, lineage_counts.clone());
     }
@@ -461,38 +426,29 @@ fn update_monoculture_visual_system(
     if let Some(monoculture) = &sim.monoculture {
         if monoculture.is_alive.0 {
             if let Ok((_entity, mut sprite, mut transform)) = monoculture_query.single_mut() {
-                // Update existing monoculture visual
-                sprite.color = Color::srgb_u8(255, 0, 255); // Fuchsia
-                let size = 50.0 + (monoculture.health.0 / 1000.0).min(200.0); // Scale size by health
+                sprite.color = Color::rgb_u8(255, 0, 255);
+                let size = 50.0 + (monoculture.health.0 / 1000.0).min(200.0);
                 sprite.custom_size = Some(Vec2::new(size, size));
-                // Position in center
                 transform.translation = Vec3::new(0.0, 0.0, 0.0);
             } else {
-                // Spawn monoculture visual if it doesn't exist
                 commands.spawn((
                     SpriteBundle {
                         sprite: Sprite {
-                            color: Color::srgb_u8(255, 0, 255), // Fuchsia
+                            color: Color::rgb_u8(255, 0, 255),
                             custom_size: Some(Vec2::new(50.0, 50.0)),
-                            ..default()
+                            ..Default::default()
                         },
                         transform: Transform::from_xyz(0.0, 0.0, 0.0),
-                        ..default()
+                        ..Default::default()
                     },
                     MonocultureVisual,
                 ));
             }
-        } else {
-            // Monoculture is dead, despawn its visual if it exists
-            if let Ok((entity, _, _)) = monoculture_query.single() {
-                commands.entity(entity).despawn();
-            }
-        }
-    } else {
-        // No monoculture, ensure its visual is despawned
-        if let Ok((entity, _, _)) = monoculture_query.single() {
+        } else if let Ok((entity, _, _)) = monoculture_query.single() {
             commands.entity(entity).despawn();
         }
+    } else if let Ok((entity, _, _)) = monoculture_query.single() {
+        commands.entity(entity).despawn();
     }
 }
 
@@ -504,37 +460,30 @@ fn update_godai_visual_system(
 ) {
     if sim.godai.is_alive.0 {
         if let Ok((_entity, mut sprite, mut transform)) = godai_query.single_mut() {
-            // Update existing GODAI visual
-            sprite.color = Color::srgb_u8(75, 0, 130); // Indigo
-            let size = 100.0 + (sim.godai.health.0 / 100000.0).min(200.0); // Scale size by health
+            sprite.color = Color::rgb_u8(75, 0, 130);
+            let size = 100.0 + (sim.godai.health.0 / 100000.0).min(200.0);
             sprite.custom_size = Some(Vec2::new(size, size));
-            // Position in center
             transform.translation = Vec3::new(0.0, 0.0, 0.0);
         } else {
-            // This should ideally not happen if GODAI is spawned in setup, but as a fallback
             commands.spawn((
                 SpriteBundle {
                     sprite: Sprite {
-                        color: Color::srgb_u8(75, 0, 130), // Indigo
+                        color: Color::rgb_u8(75, 0, 130),
                         custom_size: Some(Vec2::new(100.0, 100.0)),
-                        ..default()
+                        ..Default::default()
                     },
                     transform: Transform::from_xyz(0.0, 0.0, 0.0),
-                    ..default()
+                    ..Default::default()
                 },
                 GodaiVisual,
             ));
         }
-    } else {
-        // GODAI is dead, despawn its visual if it exists
-        if let Ok((entity, _, _)) = godai_query.single() {
-            commands.entity(entity).despawn();
-        }
+    } else if let Ok((entity, _, _)) = godai_query.single() {
+        commands.entity(entity).despawn();
     }
 }
 
-
-/// System to draw the Egui UI panel.
+/// System to render the Egui UI panel.
 fn egui_ui_system(
     mut contexts: EguiContexts,
     mut sim: ResMut<simulation::Simulation>,
@@ -543,7 +492,6 @@ fn egui_ui_system(
     egui::Window::new("Simulation Controls").show(contexts.ctx_mut(), |ui| {
         ui.heading("Simulation Status");
         ui.label(format!("Cycle: {}", format_thousand_separator(sim.current_cycle)));
-
         let live_ai_count = ai_query.iter().filter(|(_, is_alive, _)| is_alive.0).count();
         ui.label(format!("Population: {}", format_thousand_separator(live_ai_count as u64)));
         ui.label(format!("GODAI Health: {:.0}", sim.godai.health.0));
@@ -555,22 +503,19 @@ fn egui_ui_system(
         if let Some(reason) = &sim.simulation_over_reason {
             ui.label(format!("Simulation Over: {}", reason));
         }
-
         ui.add_space(10.0);
         ui.heading("Controls");
-        if ui.button(if sim.simulation_running { "Pause" } else { "Resume" }).clicked()
-        {
+        if ui.button(if sim.simulation_running { "Pause" } else { "Resume" }).clicked() {
             sim.simulation_running = !sim.simulation_running;
         }
         ui.horizontal(|ui| {
             ui.label("Speed:");
             ui.add(egui::Slider::new(&mut sim.simulation_speed, 1.0..=100.0).text("cycles/frame"));
         });
-        // Add more UI elements as needed, e.g., to show detailed stats, logs
     });
 }
 
-/// System to handle simulation end and print final summary.
+/// System to handle simulation end.
 fn simulation_end_system(
     sim: Res<simulation::Simulation>,
     mut exit: EventWriter<AppExit>,
@@ -586,41 +531,32 @@ fn simulation_end_system(
             }
         }
         sim.print_final_summary(final_ai_count, final_lineage_counts);
-        exit.write(AppExit::Success);
+        exit.send(AppExit);
     }
 }
 
-
-// --- Main Execution ---
+/// Main execution.
 fn main() {
-    // Initialize Bevy App
     App::new()
         .add_plugins(DefaultPlugins.set(WindowPlugin {
             primary_window: Some(Window {
                 title: "AI Simulation".into(),
-                resolution: (1000., 700.).into(),
-                ..default()
+                resolution: (1000.0, 700.0).into(),
+                ..Default::default()
             }),
-            ..default()
+            ..Default::default()
         }))
-        // Corrected EguiPlugin initialization to use struct literal syntax
-        .add_plugins(EguiPlugin { enable_multipass_for_primary_context: false })
-        // Add the Simulation as a Bevy Resource
+        .add_plugins(EguiPlugin)
         .insert_resource(simulation::Simulation::new())
-        // Add setup system
-        .add_systems(Startup, setup)
-        // Add simulation core logic systems
-        .add_systems(Update, global_simulation_update_system)
-        .add_systems(Update, ai_internal_state_system)
-        .add_systems(Update, ai_replication_system)
-        .add_systems(Update, ai_death_system)
-        .add_systems(Update, ai_movement_system)
-        // Add systems to update visuals
-        .add_systems(Update, update_monoculture_visual_system)
-        .add_systems(Update, update_godai_visual_system)
-        // Add Egui UI system
-        .add_systems(Update, egui_ui_system)
-        // Add system to check for simulation end
-        .add_systems(Update, simulation_end_system)
+        .add_startup_system(setup)
+        .add_system(global_simulation_update_system)
+        .add_system(ai_internal_state_system)
+        .add_system(ai_replication_system)
+        .add_system(ai_death_system)
+        .add_system(ai_movement_system)
+        .add_system(update_monoculture_visual_system)
+        .add_system(update_godai_visual_system)
+        .add_system(egui_ui_system)
+        .add_system(simulation_end_system)
         .run();
 }
