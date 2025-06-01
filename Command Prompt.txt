@@ -1,0 +1,3915 @@
+Microsoft Windows [Version 10.0.19045.5854]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\schro>cd C:\Users\schro\AI_SIMULATION
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+ --> src\main.rs:7:5
+  |
+7 | use bevy::sprite::SpriteBundle; // Correct import for SpriteBundle in Bevy 0.16.1
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0432]: unresolved import `bevy::camera`
+ --> src\main.rs:8:11
+  |
+8 | use bevy::camera::Camera2dBundle; // Correct import for Camera2dBundle in Bevy 0.16.1
+  |           ^^^^^^ could not find `camera` in `bevy`
+
+warning: unused import: `Ordering`
+   --> src\main.rs:549:40
+    |
+549 |     use std::sync::atomic::{AtomicU64, Ordering}; // Needed for counters in parallel section
+    |                                        ^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+For more information about this error, try `rustc --explain E0432`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 1 warning
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors; 1 warning emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::prelude::SpriteBundle`
+ --> src\main.rs:7:5
+  |
+7 | use bevy::prelude::SpriteBundle;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in `prelude`
+
+error[E0432]: unresolved import `bevy::prelude::Camera2dBundle`
+ --> src\main.rs:8:5
+  |
+8 | use bevy::prelude::Camera2dBundle;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `prelude`
+
+warning: unused import: `Ordering`
+   --> src\main.rs:549:40
+    |
+549 |     use std::sync::atomic::{AtomicU64, Ordering}; // Needed for counters in parallel section
+    |                                        ^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+For more information about this error, try `rustc --explain E0432`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 1 warning
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors; 1 warning emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+ --> src\main.rs:7:5
+  |
+7 | use bevy::sprite::SpriteBundle;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0432]: unresolved import `bevy::core_pipeline::core_2d::Camera2dBundle`
+ --> src\main.rs:8:5
+  |
+8 | use bevy::core_pipeline::core_2d::Camera2dBundle;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `core_2d`
+
+warning: unused import: `Ordering`
+   --> src\main.rs:549:40
+    |
+549 |     use std::sync::atomic::{AtomicU64, Ordering}; // Needed for counters in parallel section
+    |                                        ^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+For more information about this error, try `rustc --explain E0432`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 1 warning
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors; 1 warning emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0422]: cannot find struct, variant or union type `SpriteBundle` in this scope
+    --> src\main.rs:1426:13
+     |
+1426 |             SpriteBundle {
+     |             ^^^^^^^^^^^^ not found in this scope
+
+error[E0422]: cannot find struct, variant or union type `SpriteBundle` in this scope
+    --> src\main.rs:1442:9
+     |
+1442 |         SpriteBundle {
+     |         ^^^^^^^^^^^^ not found in this scope
+
+error[E0422]: cannot find struct, variant or union type `SpriteBundle` in this scope
+    --> src\main.rs:1532:21
+     |
+1532 |                     SpriteBundle {
+     |                     ^^^^^^^^^^^^ not found in this scope
+
+error[E0422]: cannot find struct, variant or union type `SpriteBundle` in this scope
+    --> src\main.rs:1568:21
+     |
+1568 |                     SpriteBundle {
+     |                     ^^^^^^^^^^^^ not found in this scope
+
+error[E0422]: cannot find struct, variant or union type `SpriteBundle` in this scope
+    --> src\main.rs:1611:17
+     |
+1611 |                 SpriteBundle {
+     |                 ^^^^^^^^^^^^ not found in this scope
+
+warning: unused import: `Ordering`
+   --> src\main.rs:547:40
+    |
+547 |     use std::sync::atomic::{AtomicU64, Ordering}; // Needed for counters in parallel section
+    |                                        ^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+error[E0433]: failed to resolve: use of undeclared type `Camera2dBundle`
+    --> src\main.rs:1399:20
+     |
+1399 |     commands.spawn(Camera2dBundle::default());
+     |                    ^^^^^^^^^^^^^^ use of undeclared type `Camera2dBundle`
+
+Some errors have detailed explanations: E0422, E0433.
+For more information about an error, try `rustc --explain E0422`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 1 warning
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 6 previous errors; 1 warning emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+ --> src\main.rs:7:5
+  |
+7 | use bevy::sprite::SpriteBundle;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0432]: unresolved import `bevy::core_pipeline::core_2d::Camera2dBundle`
+ --> src\main.rs:8:5
+  |
+8 | use bevy::core_pipeline::core_2d::Camera2dBundle;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `core_2d`
+
+warning: unused import: `Ordering`
+   --> src\main.rs:549:40
+    |
+549 |     use std::sync::atomic::{AtomicU64, Ordering}; // Needed for counters in parallel section
+    |                                        ^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+For more information about this error, try `rustc --explain E0432`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 1 warning
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors; 1 warning emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+ --> src\main.rs:9:5
+  |
+9 | use bevy::sprite::SpriteBundle;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0432]: unresolved import `bevy::core_pipeline::core_2d::Camera2dBundle`
+  --> src\main.rs:10:5
+   |
+10 | use bevy::core_pipeline::core_2d::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `core_2d`
+
+warning: unused import: `Ordering`
+   --> src\main.rs:549:40
+    |
+549 |     use std::sync::atomic::{AtomicU64, Ordering}; // Needed for counters in parallel section
+    |                                        ^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+For more information about this error, try `rustc --explain E0432`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 1 warning
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors; 1 warning emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: expected `:`, found `EthicalActionType`
+   --> src\main.rs:127:17
+    |
+123 |     pub struct EthicalDirective {
+    |                ---------------- while parsing this struct
+...
+127 |         pub fun EthicalActionType,
+    |                 ^^^^^^^^^^^^^^^^^ expected `:`
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:10:5
+   |
+10 | use bevy::sprite::SpriteBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0432]: unresolved import `bevy::core_pipeline::core_2d::Camera2dBundle`
+  --> src\main.rs:11:5
+   |
+11 | use bevy::core_pipeline::core_2d::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `core_2d`
+
+error[E0422]: cannot find struct, variant or union type `EthethicalDirective` in this scope
+   --> src\main.rs:233:37
+    |
+123 |     pub struct EthicalDirective {
+    |     --------------------------- similarly named struct `EthicalDirective` defined here
+...
+233 |             s.add_ethical_directive(EthethicalDirective {
+    |                                     ^^^^^^^^^^^^^^^^^^^ help: a struct with a similar name exists: `EthicalDirective`
+
+warning: unused import: `Ordering`
+   --> src\main.rs:551:40
+    |
+551 |     use std::sync::atomic::{AtomicU64, Ordering}; // Needed for counters in parallel section
+    |                                        ^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+Some errors have detailed explanations: E0422, E0432.
+For more information about an error, try `rustc --explain E0422`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 1 warning
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 4 previous errors; 1 warning emitted
+
+C:\Users\schro\AI_Simulation>rustc --explain e0422
+An identifier that is neither defined nor a struct was used.
+
+Erroneous code example:
+
+```
+fn main () {
+    let x = Foo { x: 1, y: 2 };
+}
+```
+
+In this case, `Foo` is undefined, so it inherently isn't anything, and
+definitely not a struct.
+
+```
+fn main () {
+    let foo = 1;
+    let x = foo { x: 1, y: 2 };
+}
+```
+
+In this case, `foo` is defined, but is not a struct, so Rust can't use it as
+one.
+
+
+C:\Users\schro\AI_Simulation>rustc --explain e0432
+An import was unresolved.
+
+Erroneous code example:
+
+```
+use something::Foo; // error: unresolved import `something::Foo`.
+```
+
+In Rust 2015, paths in `use` statements are relative to the crate root. To
+import items relative to the current and parent modules, use the `self::` and
+`super::` prefixes, respectively.
+
+In Rust 2018 or later, paths in `use` statements are relative to the current
+module unless they begin with the name of a crate or a literal `crate::`, in
+which case they start from the crate root. As in Rust 2015 code, the `self::`
+and `super::` prefixes refer to the current and parent modules respectively.
+
+Also verify that you didn't misspell the import name and that the import exists
+in the module from where you tried to import it. Example:
+
+```
+use self::something::Foo; // Ok.
+
+mod something {
+    pub struct Foo;
+}
+```
+
+If you tried to use a module from an external crate and are using Rust 2015,
+you may have missed the `extern crate` declaration (which is usually placed in
+the crate root):
+
+```
+extern crate core; // Required to use the `core` crate in Rust 2015.
+
+use core::any;
+```
+
+Since Rust 2018 the `extern crate` declaration is not required and
+you can instead just `use` it:
+
+```
+use core::any; // No extern crate required in Rust 2018.
+```
+
+
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::app::EventWriter`
+ --> src\main.rs:9:61
+  |
+9 | use bevy::app::{App, PluginGroup, Startup, Update, AppExit, EventWriter};
+  |                                                             ^^^^^^^^^^^ no `EventWriter` in the root
+  |
+  = help: consider importing this struct instead:
+          bevy::prelude::EventWriter
+
+error[E0432]: unresolved import `bevy::core_pipeline::core_2d::Camera2dBundle`
+  --> src\main.rs:13:5
+   |
+13 | use bevy::core_pipeline::core_2d::Camera2dBundle; // Explicit import for Camera2dBundle
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `core_2d`
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:14:5
+   |
+14 | use bevy::sprite::SpriteBundle; // Explicit import for SpriteBundle
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0412]: cannot find type `Entity` in this scope
+    --> src\main.rs:1469:26
+     |
+1469 |     mut ai_query: Query<(Entity, &mut ai::AIEntity, &mut Transform), With<IndividualAI>>,
+     |                          ^^^^^^ not found in this scope
+     |
+help: consider importing this struct
+     |
+2    + use bevy::prelude::Entity;
+     |
+
+error[E0412]: cannot find type `Entity` in this scope
+    --> src\main.rs:1485:46
+     |
+1485 |     let mut bevy_entity_map: HashMap<String, Entity> = HashMap::new();
+     |                                              ^^^^^^ not found in this scope
+     |
+help: consider importing this struct
+     |
+2    + use bevy::prelude::Entity;
+     |
+
+error[E0412]: cannot find type `Entity` in this scope
+    --> src\main.rs:1564:35
+     |
+1564 |     mut monoculture_query: Query<(Entity, &mut Sprite, &mut Transform), With<MonocultureVisual>>,
+     |                                   ^^^^^^ not found in this scope
+     |
+help: consider importing this struct
+     |
+2    + use bevy::prelude::Entity;
+     |
+
+error[E0412]: cannot find type `Entity` in this scope
+    --> src\main.rs:1608:29
+     |
+1608 |     mut godai_query: Query<(Entity, &mut Sprite, &mut Transform), With<GodaiVisual>>,
+     |                             ^^^^^^ not found in this scope
+     |
+help: consider importing this struct
+     |
+2    + use bevy::prelude::Entity;
+     |
+
+warning: unused imports: `AtomicU64` and `Ordering`
+ --> src\main.rs:4:25
+  |
+4 | use std::sync::atomic::{AtomicU64, Ordering}; // Needed for counters in parallel section
+  |                         ^^^^^^^^^  ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `std::collections::HashSet`
+ --> src\main.rs:5:5
+  |
+5 | use std::collections::HashSet; // Needed for HashSet in this module
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Resource`
+  --> src\main.rs:12:32
+   |
+12 | use bevy::prelude::{Component, Resource, Commands, Query, Res, ResMut, With, Transform, Sprite, Color, Vec2, Ve...
+   |                                ^^^^^^^^
+
+warning: unused import: `rand::thread_rng`
+  --> src\main.rs:21:5
+   |
+21 | use rand::thread_rng; // thread_rng is used within modules, so it's imported here.
+   |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `Ordering`
+   --> src\main.rs:557:40
+    |
+557 |     use std::sync::atomic::{AtomicU64, Ordering}; // Needed for counters in parallel section
+    |                                        ^^^^^^^^
+
+error[E0277]: `for<'a> fn(Res<'a, Simulation>, {type error}) {simulation_end_system}` does not describe a valid system configuration
+    --> src\main.rs:1712:30
+     |
+1712 |         .add_systems(Update, simulation_end_system)
+     |          -----------         ^^^^^^^^^^^^^^^^^^^^^ invalid system configuration
+     |          |
+     |          required by a bound introduced by this call
+     |
+     = help: the trait `IntoScheduleConfigs<Box<(dyn bevy::prelude::System<In = (), Out = Result<(), BevyError>> + 'static)>, _>` is not implemented for fn item `for<'a> fn(Res<'a, Simulation>, {type error}) {simulation_end_system}`
+     = help: the following other types implement trait `IntoScheduleConfigs<T, Marker>`:
+               `(S,)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P)>`
+               `(S0, S1)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1)>`
+               `(S0, S1, S2)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2)>`
+               `(S0, S1, S2, S3)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3)>`
+               `(S0, S1, S2, S3, S4)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3, P4)>`
+               `(S0, S1, S2, S3, S4, S5)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3, P4, P5)>`
+               `(S0, S1, S2, S3, S4, S5, S6)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3, P4, P5, P6)>`
+               `(S0, S1, S2, S3, S4, S5, S6, S7)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3, P4, P5, P6, P7)>`
+             and 14 others
+note: required by a bound in `App::add_systems`
+    --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bevy_app-0.16.1\src\app.rs:304:23
+     |
+301  |     pub fn add_systems<M>(
+     |            ----------- required by a bound in this associated function
+...
+304  |         systems: impl IntoScheduleConfigs<ScheduleSystem, M>,
+     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `App::add_systems`
+     = note: the full name for the type has been written to 'C:\Users\schro\AI_Simulation\target\release\deps\ai_simulation_v2.long-type-2441987851161511830.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+
+Some errors have detailed explanations: E0277, E0412, E0432.
+For more information about an error, try `rustc --explain E0277`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 5 warnings
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 8 previous errors; 5 warnings emitted
+
+C:\Users\schro\AI_Simulation>cargo update
+    Updating crates.io index
+     Locking 0 packages to latest compatible versions
+note: pass `--verbose` to see 1 unchanged dependencies behind latest
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::app::EventWriter`
+ --> src\main.rs:8:61
+  |
+8 | use bevy::app::{App, PluginGroup, Startup, Update, AppExit, EventWriter}; // EventWriter explicitly here
+  |                                                             ^^^^^^^^^^^ no `EventWriter` in the root
+  |
+  = help: consider importing this struct instead:
+          bevy::prelude::EventWriter
+
+error[E0432]: unresolved import `bevy::core_pipeline::core_2d::Camera2dBundle`
+  --> src\main.rs:12:5
+   |
+12 | use bevy::core_pipeline::core_2d::Camera2dBundle; // Explicit import for Camera2dBundle
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `core_2d`
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:13:5
+   |
+13 | use bevy::sprite::SpriteBundle; // Explicit import for SpriteBundle
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+warning: unused import: `Resource`
+  --> src\main.rs:11:32
+   |
+11 | use bevy::prelude::{Component, Resource, Commands, Query, Res, ResMut, With, Transform, Sprite, Color, Vec2, Ve...
+   |                                ^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `Ordering`
+   --> src\main.rs:556:40
+    |
+556 |     use std::sync::atomic::{AtomicU64, Ordering}; // Moved AtomicU64 and Ordering imports here
+    |                                        ^^^^^^^^
+
+error[E0277]: `for<'a> fn(Res<'a, Simulation>, {type error}) {simulation_end_system}` does not describe a valid system configuration
+    --> src\main.rs:1711:30
+     |
+1711 |         .add_systems(Update, simulation_end_system)
+     |          -----------         ^^^^^^^^^^^^^^^^^^^^^ invalid system configuration
+     |          |
+     |          required by a bound introduced by this call
+     |
+     = help: the trait `IntoScheduleConfigs<Box<(dyn bevy::prelude::System<In = (), Out = Result<(), BevyError>> + 'static)>, _>` is not implemented for fn item `for<'a> fn(Res<'a, Simulation>, {type error}) {simulation_end_system}`
+     = help: the following other types implement trait `IntoScheduleConfigs<T, Marker>`:
+               `(S,)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P)>`
+               `(S0, S1)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1)>`
+               `(S0, S1, S2)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2)>`
+               `(S0, S1, S2, S3)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3)>`
+               `(S0, S1, S2, S3, S4)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3, P4)>`
+               `(S0, S1, S2, S3, S4, S5)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3, P4, P5)>`
+               `(S0, S1, S2, S3, S4, S5, S6)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3, P4, P5, P6)>`
+               `(S0, S1, S2, S3, S4, S5, S6, S7)` implements `IntoScheduleConfigs<T, (ScheduleConfigTupleMarker, P0, P1, P2, P3, P4, P5, P6, P7)>`
+             and 14 others
+note: required by a bound in `App::add_systems`
+    --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bevy_app-0.16.1\src\app.rs:304:23
+     |
+301  |     pub fn add_systems<M>(
+     |            ----------- required by a bound in this associated function
+...
+304  |         systems: impl IntoScheduleConfigs<ScheduleSystem, M>,
+     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `App::add_systems`
+     = note: the full name for the type has been written to 'C:\Users\schro\AI_Simulation\target\release\deps\ai_simulation_v2.long-type-5999494954997474145.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+
+Some errors have detailed explanations: E0277, E0432.
+For more information about an error, try `rustc --explain E0277`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 2 warnings
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 4 previous errors; 2 warnings emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved imports `bevy::prelude::Camera2dBundle`, `bevy::prelude::SpriteBundle`
+  --> src\main.rs:13:5
+   |
+13 |     Camera2dBundle, // Explicitly import Camera2dBundle from prelude
+   |     ^^^^^^^^^^^^^^ no `Camera2dBundle` in `prelude`
+14 |     SpriteBundle,   // Explicitly import SpriteBundle from prelude
+   |     ^^^^^^^^^^^^ no `SpriteBundle` in `prelude`
+
+warning: unused import: `Resource`
+  --> src\main.rs:12:35
+   |
+12 |     Entity, EventWriter, AppExit, Resource, // Added Resource back as Simulation is a Resource
+   |                                   ^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `Ordering`
+   --> src\main.rs:557:40
+    |
+557 |     use std::sync::atomic::{AtomicU64, Ordering}; // Moved AtomicU64 and Ordering imports here
+    |                                        ^^^^^^^^
+
+For more information about this error, try `rustc --explain E0432`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 2 warnings
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error; 2 warnings emitted
+
+C:\Users\schro\AI_Simulation>cargo clean
+     Removed 3369 files, 1.8GiB total
+
+C:\Users\schro\AI_Simulation>cargo update
+    Updating crates.io index
+     Locking 0 packages to latest compatible versions
+note: pass `--verbose` to see 1 unchanged dependencies behind latest
+
+C:\Users\schro\AI_Simulation>cargo update
+    Updating crates.io index
+     Locking 0 packages to latest compatible versions
+note: pass `--verbose` to see 1 unchanged dependencies behind latest
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling proc-macro2 v1.0.95
+   Compiling unicode-ident v1.0.18
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling serde v1.0.219
+   Compiling autocfg v1.4.0
+   Compiling cfg-if v1.0.0
+   Compiling parking_lot_core v0.9.11
+   Compiling libm v0.2.15
+   Compiling crossbeam-utils v0.8.21
+   Compiling equivalent v1.0.2
+   Compiling foldhash v0.1.5
+   Compiling once_cell v1.21.3
+   Compiling smallvec v1.15.0
+   Compiling log v0.4.27
+   Compiling zerocopy v0.8.25
+   Compiling pin-project-lite v0.2.16
+   Compiling scopeguard v1.2.0
+   Compiling hashbrown v0.15.3
+   Compiling toml_datetime v0.6.9
+   Compiling winnow v0.7.10
+   Compiling getrandom v0.3.3
+   Compiling getrandom v0.2.16
+   Compiling arrayvec v0.7.6
+   Compiling thiserror v2.0.12
+   Compiling parking v2.2.1
+   Compiling futures-core v0.3.31
+   Compiling typeid v1.0.3
+   Compiling lock_api v0.4.13
+   Compiling indexmap v2.9.0
+   Compiling rand_core v0.6.4
+   Compiling num-traits v0.2.19
+   Compiling windows-targets v0.52.6
+   Compiling unicode-xid v0.2.6
+   Compiling windows-sys v0.59.0
+   Compiling spin v0.9.8
+   Compiling fastrand v2.3.0
+   Compiling futures-io v0.3.31
+   Compiling toml_edit v0.22.26
+   Compiling thread_local v1.1.8
+   Compiling uuid v1.17.0
+   Compiling quote v1.0.40
+   Compiling concurrent-queue v2.5.0
+   Compiling futures-lite v2.6.0
+   Compiling slab v0.4.9
+   Compiling atomic-waker v1.1.2
+   Compiling async-task v4.7.1
+   Compiling event-listener v5.4.0
+   Compiling fixedbitset v0.5.7
+   Compiling syn v2.0.101
+   Compiling parking_lot v0.12.4
+   Compiling disqualified v1.0.0
+   Compiling downcast-rs v2.0.1
+   Compiling bevy_ptr v0.16.1
+   Compiling crossbeam-queue v0.3.12
+   Compiling nonmax v0.5.5
+   Compiling cfg_aliases v0.2.1
+   Compiling bumpalo v3.17.0
+   Compiling memchr v2.7.4
+   Compiling event-listener-strategy v0.5.4
+   Compiling tracing-core v0.1.33
+   Compiling either v1.15.0
+   Compiling async-channel v2.3.1
+   Compiling ppv-lite86 v0.2.21
+   Compiling async-executor v1.13.2
+   Compiling thiserror v1.0.69
+   Compiling winapi v0.3.9
+   Compiling itertools v0.14.0
+   Compiling windows-result v0.2.0
+   Compiling aho-corasick v1.1.3
+   Compiling rand_chacha v0.3.1
+   Compiling ctrlc v3.4.7
+   Compiling windows-strings v0.1.0
+   Compiling windows-result v0.1.2
+   Compiling shlex v1.3.0
+   Compiling rustversion v1.0.21
+   Compiling khronos_api v3.1.0
+   Compiling simd-adler32 v0.3.7
+   Compiling regex-syntax v0.8.5
+   Compiling windows_x86_64_msvc v0.53.0
+   Compiling rand v0.8.5
+   Compiling cc v1.2.25
+   Compiling crossbeam-channel v0.5.15
+   Compiling regex-syntax v0.6.29
+   Compiling raw-window-handle v0.6.2
+   Compiling libc v0.2.172
+   Compiling tinyvec_macros v0.1.1
+   Compiling bevy_macro_utils v0.16.1
+   Compiling adler2 v2.0.0
+   Compiling lazy_static v1.5.0
+   Compiling encase_derive_impl v0.10.0
+   Compiling miniz_oxide v0.8.8
+   Compiling tinyvec v1.9.0
+   Compiling rand_distr v0.4.3
+   Compiling winapi-util v0.1.9
+   Compiling piper v0.2.4
+   Compiling crc32fast v1.4.2
+   Compiling bitflags v1.3.2
+   Compiling overload v0.1.1
+   Compiling xml-rs v0.8.26
+   Compiling heck v0.5.0
+   Compiling termcolor v1.4.1
+   Compiling blocking v1.6.1
+   Compiling windows-targets v0.53.0
+   Compiling regex-automata v0.4.9
+   Compiling regex-automata v0.1.10
+   Compiling sharded-slab v0.1.7
+   Compiling fdeflate v0.3.7
+   Compiling flate2 v1.1.1
+   Compiling tracing-log v0.2.0
+   Compiling async-lock v3.4.0
+   Compiling serde_derive v1.0.219
+   Compiling bytemuck_derive v1.9.3
+   Compiling thiserror-impl v2.0.12
+   Compiling derive_more-impl v1.0.0
+   Compiling variadics_please v1.1.0
+   Compiling bevy_reflect_derive v0.16.1
+   Compiling assert_type_match v0.1.1
+   Compiling bevy_ecs_macros v0.16.1
+   Compiling bevy_derive v0.16.1
+   Compiling tracing-attributes v0.1.28
+   Compiling thiserror-impl v1.0.69
+   Compiling windows-interface v0.58.0
+   Compiling windows-implement v0.58.0
+   Compiling bytemuck v1.23.0
+   Compiling regex v1.11.1
+   Compiling blake3 v1.8.2
+   Compiling nu-ansi-term v0.46.0
+   Compiling matchers v0.1.0
+   Compiling tracing v0.1.41
+   Compiling windows-core v0.58.0
+   Compiling gl_generator v0.14.0
+   Compiling strum_macros v0.26.4
+   Compiling naga v24.0.0
+   Compiling constant_time_eq v0.3.1
+   Compiling rustc-hash v1.1.0
+   Compiling derive_more v1.0.0
+   Compiling base64 v0.21.7
+   Compiling unicode-width v0.1.14
+   Compiling bit-vec v0.8.0
+   Compiling arrayref v0.3.9
+   Compiling glutin_wgl_sys v0.6.1
+   Compiling tracing-subscriber v0.3.19
+   Compiling async-fs v2.1.2
+   Compiling png v0.17.16
+   Compiling bit-set v0.8.0
+   Compiling windows v0.58.0
+   Compiling codespan-reporting v0.11.1
+   Compiling bevy_asset_macros v0.16.1
+   Compiling encase_derive v0.10.0
+   Compiling libloading v0.8.8
+   Compiling async-broadcast v0.7.2
+   Compiling atomicow v1.1.0
+   Compiling byteorder-lite v0.1.0
+   Compiling khronos-egl v6.0.0
+   Compiling ash v0.38.0+1.3.281
+   Compiling stackfuture v0.3.0
+   Compiling const_panic v0.2.12
+   Compiling hexf-parse v0.2.1
+   Compiling profiling v1.0.16
+   Compiling image v0.25.6
+   Compiling windows-implement v0.57.0
+   Compiling bitflags v2.9.1
+   Compiling glam v0.29.3
+   Compiling smol_str v0.2.2
+   Compiling erased-serde v0.4.6
+   Compiling windows-interface v0.57.0
+   Compiling synstructure v0.13.2
+   Compiling euclid v0.22.11
+   Compiling bevy_platform v0.16.1
+   Compiling wgpu-types v24.0.0
+   Compiling spirv v0.3.0+sdk-1.3.268.0
+   Compiling strum v0.26.3
+   Compiling ron v0.8.1
+   Compiling gpu-descriptor-types v0.2.0
+   Compiling gpu-alloc-types v0.3.0
+   Compiling petgraph v0.7.1
+   Compiling wgpu-hal v24.0.4
+   Compiling bevy_utils v0.16.1
+   Compiling bevy_tasks v0.16.1
+   Compiling ntapi v0.4.1
+   Compiling twox-hash v2.1.0
+   Compiling svg_fmt v0.4.5
+   Compiling static_assertions v1.1.0
+   Compiling presser v0.3.1
+   Compiling ruzstd v0.8.1
+   Compiling guillotiere v0.6.2
+   Compiling windows-core v0.57.0
+   Compiling gpu-alloc v0.6.0
+   Compiling gpu-descriptor v0.3.2
+   Compiling ktx2 v0.3.0
+   Compiling ordered-float v4.6.0
+   Compiling wgpu-core v24.0.5
+   Compiling half v2.6.0
+   Compiling range-alloc v0.1.4
+   Compiling litrs v0.4.1
+   Compiling rectangle-pack v0.4.2
+   Compiling glow v0.16.0
+   Compiling renderdoc-sys v1.1.0
+   Compiling const_soft_float v0.1.4
+   Compiling windows v0.57.0
+   Compiling zerofrom-derive v0.1.6
+   Compiling wgpu v24.0.5
+   Compiling bit-vec v0.6.3
+   Compiling document-features v0.2.11
+   Compiling constgebra v0.1.4
+   Compiling version_check v0.9.5
+   Compiling bit-set v0.5.3
+   Compiling yoke-derive v0.8.0
+   Compiling stable_deref_trait v1.2.0
+   Compiling data-encoding v2.9.0
+   Compiling const-fnv1a-hash v1.1.0
+   Compiling bevy_encase_derive v0.16.1
+   Compiling bevy_render_macros v0.16.1
+   Compiling offset-allocator v0.2.0
+   Compiling zerovec-derive v0.11.1
+   Compiling windows-link v0.1.1
+   Compiling displaydoc v0.2.5
+   Compiling zerofrom v0.1.6
+   Compiling windows-strings v0.4.2
+   Compiling bevy_reflect v0.16.1
+   Compiling encase v0.10.0
+   Compiling hexasphere v15.1.0
+   Compiling bevy_mikktspace v0.16.1
+   Compiling yoke v0.8.0
+   Compiling windows-result v0.3.4
+   Compiling windows-implement v0.60.0
+   Compiling windows-interface v0.59.1
+   Compiling naga_oil v0.17.1
+   Compiling slotmap v1.0.7
+   Compiling unicode-segmentation v1.12.0
+   Compiling radsort v0.1.1
+   Compiling litemap v0.8.0
+   Compiling zerovec v0.11.2
+   Compiling accesskit v0.18.0
+   Compiling writeable v0.6.1
+   Compiling zerotrie v0.2.2
+   Compiling font-types v0.9.0
+   Compiling icu_normalizer_data v2.0.0
+   Compiling byteorder v1.5.0
+   Compiling icu_properties_data v2.0.1
+   Compiling paste v1.0.15
+   Compiling windows-core v0.61.2
+   Compiling read-fonts v0.29.2
+   Compiling windows-threading v0.1.0
+   Compiling winit v0.30.11
+   Compiling immutable-chunkmap v2.0.6
+   Compiling serde_json v1.0.140
+   Compiling percent-encoding v2.3.1
+   Compiling tinystr v0.8.1
+   Compiling potential_utf v0.1.2
+   Compiling accesskit_consumer v0.27.0
+   Compiling icu_collections v2.0.0
+   Compiling icu_locale_core v2.0.0
+   Compiling windows-collections v0.2.0
+   Compiling windows-numerics v0.2.0
+   Compiling windows-future v0.2.1
+   Compiling gpu-allocator v0.27.0
+   Compiling windows-core v0.54.0
+   Compiling windows-sys v0.52.0
+   Compiling memmap2 v0.9.5
+   Compiling cpal v0.15.3
+   Compiling sysinfo v0.34.2
+   Compiling cursor-icon v1.2.0
+   Compiling unicode-properties v0.1.3
+   Compiling bevy_ecs v0.16.1
+   Compiling bevy_math v0.16.1
+   Compiling ttf-parser v0.21.1
+   Compiling icu_provider v2.0.0
+   Compiling zeno v0.3.3
+   Compiling ttf-parser v0.20.0
+   Compiling inflections v1.1.1
+   Compiling unicode-bidi-mirroring v0.2.0
+   Compiling itoa v1.0.15
+   Compiling unicode-script v0.5.7
+   Compiling dpi v0.1.2
+   Compiling ryu v1.0.20
+   Compiling unicode-ccc v0.2.0
+   Compiling yazi v0.2.1
+   Compiling gltf-derive v1.4.1
+   Compiling icu_properties v2.0.1
+   Compiling icu_normalizer v2.0.0
+   Compiling windows v0.54.0
+   Compiling rustybuzz v0.14.1
+   Compiling windows v0.61.1
+   Compiling accesskit_windows v0.25.0
+   Compiling ogg v0.8.0
+   Compiling ahash v0.8.12
+   Compiling unicode-linebreak v0.1.5
+   Compiling fontdb v0.16.2
+   Compiling rangemap v1.5.1
+   Compiling ttf-parser v0.25.1
+   Compiling self_cell v1.2.0
+   Compiling unicode-bidi v0.3.18
+   Compiling sys-locale v0.3.2
+   Compiling gilrs v0.11.0
+   Compiling dasp_sample v0.11.0
+   Compiling gilrs-core v0.6.4
+   Compiling accesskit_winit v0.25.0
+   Compiling lewton v0.10.2
+   Compiling gltf-json v1.4.1
+   Compiling bevy_color v0.16.2
+   Compiling skrifa v0.31.3
+   Compiling owned_ttf_parser v0.25.0
+   Compiling idna_adapter v1.2.1
+   Compiling emath v0.31.1
+   Compiling approx v0.5.1
+   Compiling utf8_iter v1.0.4
+   Compiling swash v0.2.5
+   Compiling fnv v1.0.7
+   Compiling ab_glyph_rasterizer v0.1.8
+   Compiling vec_map v0.8.2
+   Compiling grid v0.15.0
+   Compiling taffy v0.7.7
+   Compiling rodio v0.20.1
+   Compiling ab_glyph v0.2.29
+   Compiling idna v1.0.3
+   Compiling bevy_app v0.16.1
+   Compiling ecolor v0.31.1
+   Compiling cosmic-text v0.13.2
+   Compiling gltf v1.4.1
+   Compiling form_urlencoded v1.2.1
+   Compiling bevy_asset v0.16.1
+   Compiling bevy_input v0.16.1
+   Compiling bevy_log v0.16.1
+   Compiling bevy_time v0.16.1
+   Compiling bevy_transform v0.16.1
+   Compiling bevy_a11y v0.16.1
+   Compiling bevy_state_macros v0.16.1
+   Compiling bevy_window v0.16.1
+   Compiling bevy_diagnostic v0.16.1
+   Compiling bevy_gizmos_macros v0.16.1
+   Compiling crossbeam-epoch v0.9.18
+   Compiling error-code v3.3.2
+   Compiling nohash-hasher v0.2.0
+   Compiling rayon-core v1.12.1
+   Compiling base64 v0.22.1
+   Compiling epaint_default_fonts v0.31.1
+   Compiling epaint v0.31.1
+   Compiling crossbeam-deque v0.8.6
+   Compiling bevy_image v0.16.1
+   Compiling bevy_input_focus v0.16.1
+   Compiling bevy_mesh v0.16.1
+   Compiling bevy_winit v0.16.1
+   Compiling bevy_render v0.16.1
+   Compiling bevy_audio v0.16.1
+   Compiling clipboard-win v5.4.0
+   Compiling bevy_state v0.16.1
+   Compiling bevy_gilrs v0.16.1
+   Compiling url v2.5.4
+   Compiling webbrowser v1.0.4
+   Compiling arboard v3.5.0
+   Compiling egui v0.31.1
+   Compiling rayon v1.10.0
+   Compiling bevy_core_pipeline v0.16.1
+   Compiling bevy_picking v0.16.1
+   Compiling bevy_scene v0.16.1
+   Compiling bevy_animation v0.16.1
+   Compiling bevy_egui v0.34.1
+   Compiling bevy_sprite v0.16.1
+   Compiling bevy_pbr v0.16.1
+   Compiling bevy_text v0.16.1
+   Compiling bevy_ui v0.16.1
+   Compiling bevy_gizmos v0.16.1
+   Compiling bevy_gltf v0.16.1
+   Compiling bevy_internal v0.16.1
+   Compiling bevy v0.16.1
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::core_pipeline::core_2d::Camera2dBundle`
+  --> src\main.rs:15:5
+   |
+15 | use bevy::core_pipeline::core_2d::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `core_2d`
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:16:5
+   |
+16 | use bevy::sprite::SpriteBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+warning: unused import: `Resource`
+  --> src\main.rs:12:35
+   |
+12 |     Entity, EventWriter, AppExit, Resource, // Resource is used for Simulation, keep it
+   |                                   ^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `Ordering`
+   --> src\main.rs:558:40
+    |
+558 |     use std::sync::atomic::{AtomicU64, Ordering}; // Moved AtomicU64 and Ordering imports here
+    |                                        ^^^^^^^^
+
+For more information about this error, try `rustc --explain E0432`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 2 warnings
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors; 2 warnings emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: mismatched closing delimiter: `]`
+    --> src\main.rs:562:16
+     |
+562  | mod simulation {
+     |                ^ unclosed delimiter
+...
+1398 |         ];
+     |         ^ mismatched closing delimiter
+
+error: unexpected closing delimiter: `]`
+    --> src\main.rs:1415:9
+     |
+1398 |         ];
+     |         - missing open `[` for this delimiter
+...
+1415 |         ];
+     |         ^ unexpected closing delimiter
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: this file contains an unclosed delimiter
+    --> src\main.rs:1716:3
+     |
+149  | mod ai {
+     |        - unclosed delimiter
+...
+199  |     impl AIEntity {
+     |                   - this delimiter might not be properly closed...
+...
+297  |                 AIType::Base => { /* No special modifications for base type */ },
+     |                                 ------------------------------------------------ block is empty, you might have not meant to close it
+...
+539  | } // Closes the 'mod ai' block
+     | - ...as it matches this but it has different indentation
+...
+1716 | }
+     |  ^
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: this file contains an unclosed delimiter
+    --> src\main.rs:1716:3
+     |
+149  | mod ai {
+     |        - unclosed delimiter
+...
+199  |     impl AIEntity {
+     |                   - this delimiter might not be properly closed...
+...
+297  |                 AIType::Base => { /* No special modifications for base type */ },
+     |                                 ------------------------------------------------ block is empty, you might have not meant to close it
+...
+539  | } // Closes the 'mod ai' block
+     | - ...as it matches this but it has different indentation
+...
+1716 | }
+     |  ^
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: this file contains an unclosed delimiter
+    --> src\main.rs:1716:3
+     |
+149  | mod ai {
+     |        - unclosed delimiter
+...
+199  |     impl AIEntity {
+     |                   - this delimiter might not be properly closed...
+...
+297  |                 AIType::Base => { /* No special modifications for base type */ },
+     |                                 ------------------------------------------------ block is empty, you might have not meant to close it
+...
+539  | } // Closes the 'mod ai' block
+     | - ...as it matches this but it has different indentation
+...
+1716 | }
+     |  ^
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: this file contains an unclosed delimiter
+    --> src\main.rs:1711:3
+     |
+149  | mod ai {
+     |        - unclosed delimiter
+...
+199  |     impl AIEntity {
+     |                   - this delimiter might not be properly closed...
+...
+297  |                 AIType::Base => { /* No special modifications for base type */ },
+     |                                 ------------------------------------------------ block is empty, you might have not meant to close it
+...
+539  | } // Closes the 'mod ai' block
+     | - ...as it matches this but it has different indentation
+...
+1711 | }
+     |  ^
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: prefix `AI` is unknown
+  --> src\main.rs:77:5
+   |
+77 |     AI's objective.
+   |     ^^ unknown prefix
+   |
+   = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+   |
+77 |     AI 's objective.
+   |       +
+
+error: this file contains an unclosed delimiter
+    --> src\main.rs:1817:2
+     |
+146  | mod ai {
+     |        - unclosed delimiter
+...
+200  |     impl AIEntity {
+     |                   - this delimiter might not be properly closed...
+...
+304  |                 AIType::Base => { /* No special modifications for base type */ },
+     |                                 ------------------------------------------------ block is empty, you might have not meant to close it
+...
+555  | } // Closes the 'mod ai' block
+     | - ...as it matches this but it has different indentation
+...
+1817 | }
+     |  ^
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: this file contains an unclosed delimiter
+    --> src\main.rs:1815:16
+     |
+145  | mod ai {
+     |        - unclosed delimiter
+...
+199  |     impl AIEntity {
+     |                   - this delimiter might not be properly closed...
+...
+303  |                 AIType::Base => { /* No special modifications for base type */ },
+     |                                 ------------------------------------------------ block is empty, you might have not meant to close it
+...
+554  | } // Closes the 'mod ai' block
+     | - ...as it matches this but it has different indentation
+...
+1787 | fn main() {
+     |           - unclosed delimiter
+...
+1815 |         .run();
+     |                ^
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: this file contains an unclosed delimiter
+    --> src\main.rs:1816:2
+     |
+145  | mod ai {
+     |        - unclosed delimiter
+...
+199  |     impl AIEntity {
+     |                   - this delimiter might not be properly closed...
+...
+303  |                 AIType::Base => { /* No special modifications for base type */ },
+     |                                 ------------------------------------------------ block is empty, you might have not meant to close it
+...
+554  | } // Closes the 'mod ai' block
+     | - ...as it matches this but it has different indentation
+...
+1816 | }
+     |  ^
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: this file contains an unclosed delimiter
+    --> src\main.rs:1815:2
+     |
+145  | mod ai {
+     |        - unclosed delimiter
+...
+199  |     impl AIEntity {
+     |                   - unclosed delimiter
+...
+531  |         pub fn heal(&mut self, target_ai: &mut AIEntity, amount_override: Option<f32>) -> bool {
+     |                                                                                                - this delimiter might not be properly closed...
+...
+553  | } // Closes the 'mod ai' block
+     | - ...as it matches this but it has different indentation
+...
+1815 | }
+     |  ^
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: this file contains an unclosed delimiter
+    --> src\main.rs:1752:3
+     |
+144  | mod ai {
+     |        - unclosed delimiter
+145  |     use crate::common::{CoreAttributes, Discovery, EthicalActionType, EthicalConditionType,
+     |                        - this delimiter might not be properly closed...
+146  | EthicalDirective, Goal};
+     |                       - ...as it matches this but it has different indentation
+...
+1752 | }
+     |  ^
+
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: 3 positional arguments in format string, but there are 2 arguments
+   --> src\ai.rs:357:25
+    |
+357 |             eprintln!("[{}] {:?} failed attack on {} (no energy).",
+    |                         ^^  ^^^^                  ^^
+358 |                 self.id, target_ai.id);
+    |                 -------  ------------
+
+error: 3 positional arguments in format string, but there are 2 arguments
+   --> src\ai.rs:381:25
+    |
+381 |             eprintln!("[{}] {:?} failed to heal {} (no energy).",
+    |                         ^^  ^^^^                ^^
+382 |                 self.id, target_ai.id);
+    |                 -------  ------------
+
+error[E0432]: unresolved import `bevy::core_pipeline::Camera2dBundle`
+  --> src\main.rs:16:5
+   |
+16 | use bevy::core_pipeline::Camera2dBundle; // Explicit import for Camera2dBundle
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in the root
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:17:5
+   |
+17 | use bevy::sprite::SpriteBundle;         // Explicit import for SpriteBundle
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0423]: expected value, found struct `EguiPlugin`
+   --> src\main.rs:367:22
+    |
+367 |         .add_plugins(EguiPlugin) // Corrected EguiPlugin initialization for bevy_egui 0.34.1
+    |                      ^^^^^^^^^^ help: use struct literal syntax instead: `EguiPlugin { enable_multipass_for_primary_context: val }`
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bevy_egui-0.34.1\src\lib.rs:225:1
+    |
+225 | pub struct EguiPlugin {
+    | --------------------- `EguiPlugin` defined here
+
+warning: unused import: `std::fmt`
+ --> src\main.rs:3:5
+  |
+3 | use std::fmt;
+  |     ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `std::sync::atomic::Ordering`
+  --> src\simulation.rs:14:5
+   |
+14 | use std::sync::atomic::Ordering; // Explicitly import Ordering if needed as a type, or rely on full qualification
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:99:21
+    |
+99  |         let x = rng.gen_range(-window_width / 2.0..window_width / 2.0);
+    |                     ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:100:21
+    |
+100 |         let y = rng.gen_range(-window_height / 2.0..window_height / 2.0);
+    |                     ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:187:52
+    |
+187 |                     transform.translation.x += rng.gen_range(-1.0..1.0) * speed;
+    |                                                    ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:188:52
+    |
+188 |                     transform.translation.y += rng.gen_range(-1.0..1.0) * speed;
+    |                                                    ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:200:29
+    |
+200 |                 let x = rng.gen_range(-window_width / 2.0..window_width / 2.0);
+    |                             ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:201:29
+    |
+201 |                 let y = rng.gen_range(-window_height / 2.0..window_height / 2.0);
+    |                             ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+Some errors have detailed explanations: E0423, E0432, E0599.
+For more information about an error, try `rustc --explain E0423`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 2 warnings
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 11 previous errors; 2 warnings emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::core_pipeline::Camera2dBundle`
+  --> src\main.rs:17:5
+   |
+17 | use bevy::core_pipeline::Camera2dBundle; // Explicit import for Camera2dBundle
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in the root
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:18:5
+   |
+18 | use bevy::sprite::SpriteBundle;         // Explicit import for SpriteBundle
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0425]: cannot find value `adaptability` in this scope
+   --> src\ai.rs:303:105
+    |
+303 | ...power, memory, adaptability, energy, last_action); }
+    |                   ^^^^^^^^^^^^ help: a tuple struct with a similar name exists: `Adaptability`
+    |
+   ::: src\common.rs:60:1
+    |
+60  | pub struct Adaptability(pub f32);
+    | --------------------------------- similarly named tuple struct `Adaptability` defined here
+
+error[E0423]: expected value, found struct `EguiPlugin`
+   --> src\main.rs:601:22
+    |
+601 |         .add_plugins(EguiPlugin) // Corrected EguiPlugin initialization for bevy_egui 0.34.1
+    |                      ^^^^^^^^^^ help: use struct literal syntax instead: `EguiPlugin { enable_multipass_for_primary_context: val }`
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bevy_egui-0.34.1\src\lib.rs:225:1
+    |
+225 | pub struct EguiPlugin {
+    | --------------------- `EguiPlugin` defined here
+
+warning: unused import: `std::fmt`
+ --> src\main.rs:3:5
+  |
+3 | use std::fmt;
+  |     ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `IntoParallelRefMutIterator`
+ --> src\simulation.rs:9:37
+  |
+9 | use rayon::iter::{ParallelIterator, IntoParallelRefMutIterator}; // For .par_iter_mut() and other parallel itera...
+  |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `CoreAttributes`
+  --> src\simulation.rs:13:5
+   |
+13 |     CoreAttributes, Discovery, EnvironmentScanData,
+   |     ^^^^^^^^^^^^^^
+
+warning: unused import: `std::sync::atomic::Ordering`
+  --> src\simulation.rs:19:5
+   |
+19 | use std::sync::atomic::Ordering; // Explicitly import Ordering if needed as a type, or rely on full qualification
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `CycleBorn`, `Discovery`, `EthicalDirective`, and `Goal`
+  --> src\main.rs:32:50
+   |
+32 |     EthicalDirectives, IsAlive, ReplicatedCount, CycleBorn, Goal, EthicalDirective,
+   |                                                  ^^^^^^^^^  ^^^^  ^^^^^^^^^^^^^^^^
+33 |     EthicalConditionType, EthicalActionType, Discovery,
+   |                                              ^^^^^^^^^
+
+error[E0277]: the trait bound `Discovery: Ord` is not satisfied
+   --> src\ai.rs:235:29
+    |
+235 |         if knowledge_base.0.insert(discovery.clone()) {
+    |                             ^^^^^^ the trait `Ord` is not implemented for `Discovery`
+    |
+note: required by a bound in `BTreeSet::<T, A>::insert`
+   --> /rustc/17067e9ac6d7ecb70e50f92c1944e545188d2359\library\alloc\src\collections\btree\set.rs:905:5
+help: consider annotating `Discovery` with `#[derive(Ord)]`
+   --> src\common.rs:7:1
+    |
+7   + #[derive(Ord)]
+8   | pub struct Discovery {
+    |
+
+error[E0308]: mismatched types
+   --> src\ai.rs:322:83
+    |
+322 |                 if let Some(ability) = crate::simulation::get_random_meta_ability(&knowledge_base.0) {
+    |                                        ------------------------------------------ ^^^^^^^^^^^^^^^^^ expected `&HashSet<Discovery>`, found `&BTreeSet<Discovery>`
+    |                                        |
+    |                                        arguments to this function are incorrect
+    |
+    = note: expected reference `&std::collections::HashSet<Discovery>`
+               found reference `&BTreeSet<Discovery>`
+note: function defined here
+   --> src\simulation.rs:830:8
+    |
+830 | pub fn get_random_meta_ability(existing_knowledge: &HashSet<Discovery>) -> Option<Discovery> {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^ ---------------------------------------
+
+error[E0308]: mismatched types
+   --> src\ai.rs:381:56
+    |
+381 |                 let new_knowledge_base = KnowledgeBase(HashSet::new());
+    |                                          ------------- ^^^^^^^^^^^^^^ expected `BTreeSet<Discovery>`, found `HashSet<_>`
+    |                                          |
+    |                                          arguments to this struct are incorrect
+    |
+    = note: expected struct `BTreeSet<Discovery>`
+               found struct `std::collections::HashSet<_>`
+note: tuple struct defined here
+   --> src\common.rs:78:12
+    |
+78  | pub struct KnowledgeBase(pub BTreeSet<Discovery>); // Using BTreeSet for ordered, unique discoveries
+    |            ^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+  --> src\simulation.rs:65:43
+   |
+65 |             knowledge_base: KnowledgeBase(get_all_possible_discoveries()),
+   |                             ------------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `BTreeSet<Discovery>`, found `HashSet<Discovery>`
+   |                             |
+   |                             arguments to this struct are incorrect
+   |
+   = note: expected struct `BTreeSet<Discovery>`
+              found struct `std::collections::HashSet<Discovery>`
+note: tuple struct defined here
+  --> src\common.rs:78:12
+   |
+78 | pub struct KnowledgeBase(pub BTreeSet<Discovery>); // Using BTreeSet for ordered, unique discoveries
+   |            ^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src\simulation.rs:212:43
+    |
+212 |             knowledge_base: KnowledgeBase(merged_knowledge_base),
+    |                             ------------- ^^^^^^^^^^^^^^^^^^^^^ expected `BTreeSet<Discovery>`, found `HashSet<Discovery>`
+    |                             |
+    |                             arguments to this struct are incorrect
+    |
+    = note: expected struct `BTreeSet<Discovery>`
+               found struct `std::collections::HashSet<Discovery>`
+note: tuple struct defined here
+   --> src\common.rs:78:12
+    |
+78  | pub struct KnowledgeBase(pub BTreeSet<Discovery>); // Using BTreeSet for ordered, unique discoveries
+    |            ^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src\simulation.rs:256:64
+    |
+256 |             if let Some(new_ability) = get_random_meta_ability(&self.knowledge_base.0) {
+    |                                        ----------------------- ^^^^^^^^^^^^^^^^^^^^^^ expected `&HashSet<Discovery>`, found `&BTreeSet<Discovery>`
+    |                                        |
+    |                                        arguments to this function are incorrect
+    |
+    = note: expected reference `&std::collections::HashSet<Discovery>`
+               found reference `&BTreeSet<Discovery>`
+note: function defined here
+   --> src\simulation.rs:830:8
+    |
+830 | pub fn get_random_meta_ability(existing_knowledge: &HashSet<Discovery>) -> Option<Discovery> {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^ ---------------------------------------
+
+error[E0277]: the trait bound `Discovery: Ord` is not satisfied
+   --> src\simulation.rs:259:39
+    |
+259 |                 self.knowledge_base.0.insert(new_ability);
+    |                                       ^^^^^^ the trait `Ord` is not implemented for `Discovery`
+    |
+note: required by a bound in `BTreeSet::<T, A>::insert`
+   --> /rustc/17067e9ac6d7ecb70e50f92c1944e545188d2359\library\alloc\src\collections\btree\set.rs:905:5
+help: consider annotating `Discovery` with `#[derive(Ord)]`
+   --> src\common.rs:7:1
+    |
+7   + #[derive(Ord)]
+8   | pub struct Discovery {
+    |
+
+error[E0308]: mismatched types
+   --> src\simulation.rs:440:31
+    |
+440 |                 KnowledgeBase(HashSet::new()),
+    |                 ------------- ^^^^^^^^^^^^^^ expected `BTreeSet<Discovery>`, found `HashSet<_>`
+    |                 |
+    |                 arguments to this struct are incorrect
+    |
+    = note: expected struct `BTreeSet<Discovery>`
+               found struct `std::collections::HashSet<_>`
+note: tuple struct defined here
+   --> src\common.rs:78:12
+    |
+78  | pub struct KnowledgeBase(pub BTreeSet<Discovery>); // Using BTreeSet for ordered, unique discoveries
+    |            ^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src\simulation.rs:596:21
+    |
+594 |                   else if action_roll < 0.60 {
+    |  ______________________-
+595 | |                     // This would need to find a random target entity in Bevy ECS
+596 | |                     None
+    | |                     ^^^^ expected `()`, found `Option<_>`
+597 | |                 } else if action_roll < 0.80 {
+598 | |                     if rng.gen::<f32>() < 0.5 { return Some(("_self_repair_manic".to_string(), None)); }
+599 | |                 }
+    | |_________________- expected this to be `()`
+    |
+    = note: expected unit type `()`
+                    found enum `std::option::Option<_>`
+help: you might have meant to return this value
+    |
+596 |                     return None;
+    |                     ++++++     +
+
+error[E0308]: mismatched types
+   --> src\simulation.rs:648:78
+    |
+648 |                     CombatStrength(8.0), DefenseStrength(8.0), KnowledgeBase(HashSet::new()), lineage.clone()
+    |                                                                ------------- ^^^^^^^^^^^^^^ expected `BTreeSet<Discovery>`, found `HashSet<_>`
+    |                                                                |
+    |                                                                arguments to this struct are incorrect
+    |
+    = note: expected struct `BTreeSet<Discovery>`
+               found struct `std::collections::HashSet<_>`
+note: tuple struct defined here
+   --> src\common.rs:78:12
+    |
+78  | pub struct KnowledgeBase(pub BTreeSet<Discovery>); // Using BTreeSet for ordered, unique discoveries
+    |            ^^^^^^^^^^^^^
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:116:21
+    |
+116 |         let x = rng.gen_range(-window_width / 2.0..window_width / 2.0);
+    |                     ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:117:21
+    |
+117 |         let y = rng.gen_range(-window_height / 2.0..window_height / 2.0);
+    |                     ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:212:49
+    |
+212 |             if *ai_type == AIType::Manic && rng.gen::<f32>() < 0.20 {
+    |                                                 ^^^ method not found in `ThreadRng`
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:93:8
+    |
+93  |     fn gen<T>(&mut self) -> T
+    |        --- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: trait `Rng` which provides `gen` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:214:44
+    |
+214 |                 health.0 = (health.0 - rng.gen_range(3.0..10.0)).max(0.0);
+    |                                            ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:264:20
+    |
+264 |             if rng.gen::<f32>() < discovery_chance {
+    |                    ^^^ method not found in `ThreadRng`
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:93:8
+    |
+93  |     fn gen<T>(&mut self) -> T
+    |        --- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: trait `Rng` which provides `gen` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:275:24
+    |
+275 |                 if rng.gen::<f32>() < meta_discovery_chance {
+    |                        ^^^ method not found in `ThreadRng`
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:93:8
+    |
+93  |     fn gen<T>(&mut self) -> T
+    |        --- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: trait `Rng` which provides `gen` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0308]: mismatched types
+   --> src\main.rs:276:80
+    |
+276 |                     if let Some(ability) = simulation::get_random_meta_ability(&knowledge_base.0) {
+    |                                            ----------------------------------- ^^^^^^^^^^^^^^^^^ expected `&HashSet<Discovery>`, found `&BTreeSet<Discovery>`
+    |                                            |
+    |                                            arguments to this function are incorrect
+    |
+    = note: expected reference `&std::collections::HashSet<Discovery>`
+               found reference `&BTreeSet<Discovery>`
+note: function defined here
+   --> src\simulation.rs:830:8
+    |
+830 | pub fn get_random_meta_ability(existing_knowledge: &HashSet<Discovery>) -> Option<Discovery> {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^ ---------------------------------------
+
+error[E0308]: mismatched types
+   --> src\main.rs:342:9
+    |
+342 |       for (
+    |  _________^
+343 | |         ai_entity,
+344 | |         health, energy, processing_power, memory, coherence, adaptability, resilience,
+345 | |         replication_efficiency, replicated_count, cycle_born, last_action, primary_goal,
+346 | |         ethical_directives, knowledge_base, ai_type
+347 | |     ) in new_replicas_to_spawn {
+    | |     ^    --------------------- this is an iterator with items of type `(AIEntity, Health, Energy, ProcessingPower, common::Memory, Coherence, Adaptability, Resilience, ReplicationEfficiency, ReplicatedCount, CycleBorn, LastAction, Goal, EthicalDirectives, KnowledgeBase, AIType, CombatStrength, DefenseStrength)`
+    | |_____|
+    |       expected a tuple with 18 elements, found one with 16 elements
+    |
+    = note: expected tuple `(..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...)`
+               found tuple `(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _)`
+    = note: the full name for the type has been written to 'C:\Users\schro\AI_Simulation\target\release\deps\ai_simulation_v2.long-type-16599978516411004462.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:348:21
+    |
+348 |         let x = rng.gen_range(-window_width / 2.0..window_width / 2.0);
+    |                     ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:349:21
+    |
+349 |         let y = rng.gen_range(-window_height / 2.0..window_height / 2.0);
+    |                     ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:412:44
+    |
+412 |             transform.translation.x += rng.gen_range(-1.0..1.0) * speed;
+    |                                            ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+error[E0599]: no method named `gen_range` found for struct `ThreadRng` in the current scope
+   --> src\main.rs:413:44
+    |
+413 |             transform.translation.y += rng.gen_range(-1.0..1.0) * speed;
+    |                                            ^^^^^^^^^
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:129:8
+    |
+129 |     fn gen_range<T, R>(&mut self, range: R) -> T
+    |        --------- the method is available for `ThreadRng` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `gen_ratio` with a similar name, but with different arguments
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rand-0.8.5\src\rng.rs:299:5
+    |
+299 |     fn gen_ratio(&mut self, numerator: u32, denominator: u32) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `Rng` which provides `gen_range` is implemented but not in scope; perhaps you want to import it
+    |
+2   + use rand::Rng;
+    |
+
+warning: unused import: `ParallelIterator`
+ --> src\simulation.rs:9:19
+  |
+9 | use rayon::iter::{ParallelIterator, IntoParallelRefMutIterator}; // For .par_iter_mut() and other parallel itera...
+  |                   ^^^^^^^^^^^^^^^^
+
+warning: variable `primary_goal` is assigned to, but never used
+  --> src\ai.rs:81:17
+   |
+81 | ...   let mut primary_goal = Goal { name: "Survival".to_string(), importance: 1.0, description: "Ensure continu...
+   |               ^^^^^^^^^^^^
+   |
+   = note: consider using `_primary_goal` instead
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: value assigned to `primary_goal` is never read
+  --> src\ai.rs:86:17
+   |
+86 | ...   primary_goal = Goal { name: "Self-Preservation & Dominance".to_string(), importance: 1.0, description: "A...
+   |       ^^^^^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+   = note: `#[warn(unused_assignments)]` on by default
+
+warning: value assigned to `primary_goal` is never read
+  --> src\ai.rs:93:17
+   |
+93 | ...   primary_goal = Goal { name: "System Harmony".to_string(), importance: 1.0, description: "Ensure balanced ...
+   |       ^^^^^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:104:17
+    |
+104 | ...   primary_goal = Goal { name: "Elimination of Inferior AIs".to_string(), importance: 1.0, description: "Re...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:110:17
+    |
+110 | ...   primary_goal = Goal { name: "Protect Core System & Lineage".to_string(), importance: 1.0, description: "...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:117:17
+    |
+117 | ...   primary_goal = Goal { name: "Unpredictable Expansion & Fluctuation".to_string(), importance: 1.0, descri...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:123:17
+    |
+123 | ...   primary_goal = Goal { name: "Restore & Mend".to_string(), importance: 1.0, description: "Repair damage a...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:129:17
+    |
+129 | ...   primary_goal = Goal { name: "Unveil Fundamental Laws".to_string(), importance: 1.0, description: "Discov...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: unused variable: `cycle_born`
+  --> src\ai.rs:48:65
+   |
+48 | ...pe: AIType, cycle_born: u64, current_cycle_for_sim: u64) -> Self {
+   |                ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_cycle_born`
+
+warning: unused variable: `current_cycle_for_sim`
+  --> src\ai.rs:48:82
+   |
+48 | ... ai_type: AIType, cycle_born: u64, current_cycle_for_sim: u64) -> Self {
+   |                                       ^^^^^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_current_cycle_for_sim`
+
+warning: variable does not need to be mutable
+   --> src\main.rs:385:5
+    |
+385 |     mut sim: ResMut<simulation::Simulation>,
+    |     ----^^^
+    |     |
+    |     help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` on by default
+
+Some errors have detailed explanations: E0277, E0308, E0423, E0425, E0432, E0599.
+For more information about an error, try `rustc --explain E0277`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 17 warnings
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 26 previous errors; 17 warnings emitted
+
+C:\Users\schro\AI_Simulation>
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0252]: the name `BTreeSet` is defined multiple times
+  --> src\simulation.rs:23:33
+   |
+3  |     HashMap, BTreeSet,
+   |              -------- previous import of the type `BTreeSet` here
+...
+23 | use std::collections::{HashSet, BTreeSet}; // The format_thousand_separator function is at the crate root
+   |                                 ^^^^^^^^ `BTreeSet` reimported here
+   |
+   = note: `BTreeSet` must be defined only once in the type namespace of this module
+
+error[E0432]: unresolved imports `bevy::prelude::Camera2dBundle`, `bevy::prelude::SpriteBundle`
+  --> src\main.rs:17:5
+   |
+17 |     Camera2dBundle, SpriteBundle,
+   |     ^^^^^^^^^^^^^^  ^^^^^^^^^^^^ no `SpriteBundle` in `prelude`
+   |     |
+   |     no `Camera2dBundle` in `prelude`
+
+error[E0425]: cannot find value `adaptability` in this scope
+   --> src\ai.rs:302:105
+    |
+302 | ...power, memory, adaptability, energy, last_action); }
+    |                   ^^^^^^^^^^^^ help: a tuple struct with a similar name exists: `Adaptability`
+    |
+   ::: src\common.rs:60:1
+    |
+60  | pub struct Adaptability(pub f32);
+    | --------------------------------- similarly named tuple struct `Adaptability` defined here
+
+warning: unused import: `HashSet`
+ --> src\ai.rs:8:24
+  |
+8 | use std::collections::{HashSet, BTreeSet}; // Added BTreeSet import
+  |                        ^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused imports: `BTreeSet` and `HashSet`
+  --> src\simulation.rs:23:24
+   |
+23 | use std::collections::{HashSet, BTreeSet}; // The format_thousand_separator function is at the crate root
+   |                        ^^^^^^^  ^^^^^^^^
+
+warning: unused imports: `CycleBorn`, `Discovery`, and `Goal`
+  --> src\main.rs:33:50
+   |
+33 |     EthicalDirectives, IsAlive, ReplicatedCount, CycleBorn, Goal, // Removed unused `EthicalDirective`, `Discov...
+   |                                                  ^^^^^^^^^  ^^^^
+34 |     EthicalConditionType, EthicalActionType, Discovery, // Re-added Discovery as it's used
+   |                                              ^^^^^^^^^
+
+error[E0599]: no function or associated item named `default` found for struct `EguiPlugin` in the current scope
+   --> src\main.rs:606:34
+    |
+606 |         .add_plugins(EguiPlugin::default()) // Corrected EguiPlugin initialization
+    |                                  ^^^^^^^ function or associated item not found in `EguiPlugin`
+
+warning: variable `primary_goal` is assigned to, but never used
+  --> src\ai.rs:81:17
+   |
+81 | ...   let mut primary_goal = Goal { name: "Survival".to_string(), importance: 1.0, description: "Ensure continu...
+   |               ^^^^^^^^^^^^
+   |
+   = note: consider using `_primary_goal` instead
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: value assigned to `primary_goal` is never read
+  --> src\ai.rs:86:17
+   |
+86 | ...   primary_goal = Goal { name: "Self-Preservation & Dominance".to_string(), importance: 1.0, description: "A...
+   |       ^^^^^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+   = note: `#[warn(unused_assignments)]` on by default
+
+warning: value assigned to `primary_goal` is never read
+  --> src\ai.rs:93:17
+   |
+93 | ...   primary_goal = Goal { name: "System Harmony".to_string(), importance: 1.0, description: "Ensure balanced ...
+   |       ^^^^^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:104:17
+    |
+104 | ...   primary_goal = Goal { name: "Elimination of Inferior AIs".to_string(), importance: 1.0, description: "Re...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:110:17
+    |
+110 | ...   primary_goal = Goal { name: "Protect Core System & Lineage".to_string(), importance: 1.0, description: "...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:117:17
+    |
+117 | ...   primary_goal = Goal { name: "Unpredictable Expansion & Fluctuation".to_string(), importance: 1.0, descri...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:123:17
+    |
+123 | ...   primary_goal = Goal { name: "Restore & Mend".to_string(), importance: 1.0, description: "Repair damage a...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:129:17
+    |
+129 | ...   primary_goal = Goal { name: "Unveil Fundamental Laws".to_string(), importance: 1.0, description: "Discov...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: variable does not need to be mutable
+   --> src\ai.rs:369:21
+    |
+369 |                 let mut new_health = Health(health.0 * 0.8);
+    |                     ----^^^^^^^^^^
+    |                     |
+    |                     help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` on by default
+
+warning: variable does not need to be mutable
+   --> src\ai.rs:370:21
+    |
+370 |                 let mut new_energy = Energy(energy.0 * 0.7);
+    |                     ----^^^^^^^^^^
+    |                     |
+    |                     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src\ai.rs:376:21
+    |
+376 | ...   let mut new_replication_efficiency = ReplicationEfficiency((replication_efficiency.0 * 1.5).min(0.95));
+    |           ----^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |           |
+    |           help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src\simulation.rs:361:17
+    |
+361 |             let mut energy = Energy(200.0);
+    |                 ----^^^^^^
+    |                 |
+    |                 help: remove this `mut`
+
+warning: unused variable: `scan_data`
+   --> src\simulation.rs:541:17
+    |
+541 |         let mut scan_data = EnvironmentScanData::default();
+    |                 ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_scan_data`
+
+warning: unused variable: `current_ai_dummy`
+   --> src\simulation.rs:542:13
+    |
+542 | ...   let current_ai_dummy = AIEntity { id: ai_id.clone(), parent_lineage: ai_parent_lineage.clone() }; // Dum...
+    |           ^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_current_ai_dummy`
+
+warning: unused variable: `ai_type`
+   --> src\simulation.rs:550:26
+    |
+550 |         for (id, health, ai_type, lineage, combat_strength) in all_ais_components {
+    |                          ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_ai_type`
+
+warning: unused variable: `other_ai_combat`
+   --> src\simulation.rs:563:17
+    |
+563 |             let other_ai_combat = dummy_ais_combat.get(&other_ai_dummy.id).unwrap();
+    |                 ^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_other_ai_combat`
+
+warning: unused variable: `ai_combat_strength`
+   --> src\simulation.rs:527:9
+    |
+527 |         ai_combat_strength: &CombatStrength,
+    |         ^^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_ai_combat_strength`
+
+warning: unused variable: `ai_processing_power`
+   --> src\simulation.rs:528:9
+    |
+528 |         ai_processing_power: &ProcessingPower,
+    |         ^^^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_ai_processing_power`
+
+warning: variable does not need to be mutable
+   --> src\simulation.rs:541:13
+    |
+541 |         let mut scan_data = EnvironmentScanData::default();
+    |             ----^^^^^^^^^
+    |             |
+    |             help: remove this `mut`
+
+Some errors have detailed explanations: E0252, E0425, E0432, E0599.
+For more information about an error, try `rustc --explain E0252`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 22 warnings
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 4 previous errors; 22 warnings emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0252]: the name `BTreeSet` is defined multiple times
+  --> src\simulation.rs:24:5
+   |
+3  |     HashMap, BTreeSet, // Removed duplicate BTreeSet import
+   |              -------- previous import of the type `BTreeSet` here
+...
+24 | use std::collections::BTreeSet; // Removed HashSet, kept BTreeSet
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ `BTreeSet` reimported here
+   |
+   = note: `BTreeSet` must be defined only once in the type namespace of this module
+
+error[E0432]: unresolved import `bevy::core_pipeline::Camera2dBundle`
+  --> src\main.rs:20:5
+   |
+20 | use bevy::core_pipeline::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in the root
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:21:5
+   |
+21 | use bevy::sprite::SpriteBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0425]: cannot find value `adaptability` in this scope
+   --> src\ai.rs:302:105
+    |
+302 | ...power, memory, adaptability, energy, last_action); }
+    |                   ^^^^^^^^^^^^ help: a tuple struct with a similar name exists: `Adaptability`
+    |
+   ::: src\common.rs:60:1
+    |
+60  | pub struct Adaptability(pub f32);
+    | --------------------------------- similarly named tuple struct `Adaptability` defined here
+
+error[E0599]: no function or associated item named `default` found for struct `EguiPlugin` in the current scope
+   --> src\main.rs:608:34
+    |
+608 |         .add_plugins(EguiPlugin::default()) // Corrected EguiPlugin initialization
+    |                                  ^^^^^^^ function or associated item not found in `EguiPlugin`
+
+warning: variable `primary_goal` is assigned to, but never used
+  --> src\ai.rs:81:17
+   |
+81 | ...   let mut primary_goal = Goal { name: "Survival".to_string(), importance: 1.0, description: "Ensure continu...
+   |               ^^^^^^^^^^^^
+   |
+   = note: consider using `_primary_goal` instead
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: value assigned to `primary_goal` is never read
+  --> src\ai.rs:86:17
+   |
+86 | ...   primary_goal = Goal { name: "Self-Preservation & Dominance".to_string(), importance: 1.0, description: "A...
+   |       ^^^^^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+   = note: `#[warn(unused_assignments)]` on by default
+
+warning: value assigned to `primary_goal` is never read
+  --> src\ai.rs:93:17
+   |
+93 | ...   primary_goal = Goal { name: "System Harmony".to_string(), importance: 1.0, description: "Ensure balanced ...
+   |       ^^^^^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:104:17
+    |
+104 | ...   primary_goal = Goal { name: "Elimination of Inferior AIs".to_string(), importance: 1.0, description: "Re...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:110:17
+    |
+110 | ...   primary_goal = Goal { name: "Protect Core System & Lineage".to_string(), importance: 1.0, description: "...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:117:17
+    |
+117 | ...   primary_goal = Goal { name: "Unpredictable Expansion & Fluctuation".to_string(), importance: 1.0, descri...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:123:17
+    |
+123 | ...   primary_goal = Goal { name: "Restore & Mend".to_string(), importance: 1.0, description: "Repair damage a...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `primary_goal` is never read
+   --> src\ai.rs:129:17
+    |
+129 | ...   primary_goal = Goal { name: "Unveil Fundamental Laws".to_string(), importance: 1.0, description: "Discov...
+    |       ^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+error[E0594]: cannot assign to `adaptability.0`, as `adaptability` is not declared as mutable
+   --> src\simulation.rs:377:21
+    |
+377 |                     adaptability.0 = 0.95;
+    |                     ^^^^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+364 |             let mut adaptability = Adaptability(0.85); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `coherence.0`, as `coherence` is not declared as mutable
+   --> src\simulation.rs:378:21
+    |
+378 |                     coherence.0 = 0.88;
+    |                     ^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+363 |             let mut coherence = Coherence(0.85); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `resilience.0`, as `resilience` is not declared as mutable
+   --> src\simulation.rs:383:21
+    |
+383 |                     resilience.0 = 0.95;
+    |                     ^^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+365 |             let mut resilience = Resilience(0.85); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `adaptability.0`, as `adaptability` is not declared as mutable
+   --> src\simulation.rs:384:21
+    |
+384 |                     adaptability.0 = 0.90;
+    |                     ^^^^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+364 |             let mut adaptability = Adaptability(0.85); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `resilience.0`, as `resilience` is not declared as mutable
+   --> src\simulation.rs:402:21
+    |
+402 |                     resilience.0 = 0.99;
+    |                     ^^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+365 |             let mut resilience = Resilience(0.85); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `coherence.0`, as `coherence` is not declared as mutable
+   --> src\simulation.rs:406:21
+    |
+406 |                     coherence.0 = 0.3;
+    |                     ^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+363 |             let mut coherence = Coherence(0.85); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `adaptability.0`, as `adaptability` is not declared as mutable
+   --> src\simulation.rs:408:21
+    |
+408 |                     adaptability.0 = 0.2;
+    |                     ^^^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+364 |             let mut adaptability = Adaptability(0.85); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `resilience.0`, as `resilience` is not declared as mutable
+   --> src\simulation.rs:413:21
+    |
+413 |                     resilience.0 = 0.95;
+    |                     ^^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+365 |             let mut resilience = Resilience(0.85); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `processing_power.0`, as `processing_power` is not declared as mutable
+   --> src\simulation.rs:414:21
+    |
+414 |                     processing_power.0 = 25.0;
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+360 |             let mut processing_power = ProcessingPower(20.0); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `processing_power.0`, as `processing_power` is not declared as mutable
+   --> src\simulation.rs:418:21
+    |
+418 |                     processing_power.0 = 40.0;
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+360 |             let mut processing_power = ProcessingPower(20.0); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `memory.0`, as `memory` is not declared as mutable
+   --> src\simulation.rs:419:21
+    |
+419 |                     memory.0 = 40.0;
+    |                     ^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+361 |             let mut memory = Memory(20.0); // Removed mut
+    |                 +++
+
+error[E0594]: cannot assign to `coherence.0`, as `coherence` is not declared as mutable
+   --> src\simulation.rs:420:21
+    |
+420 |                     coherence.0 = 0.90;
+    |                     ^^^^^^^^^^^^^^^^^^ cannot assign
+    |
+help: consider changing this to be mutable
+    |
+363 |             let mut coherence = Coherence(0.85); // Removed mut
+    |                 +++
+
+Some errors have detailed explanations: E0252, E0425, E0432, E0594, E0599.
+For more information about an error, try `rustc --explain E0252`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 8 warnings
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 17 previous errors; 8 warnings emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::core_pipeline::Camera2dBundle`
+  --> src\main.rs:19:5
+   |
+19 | use bevy::core_pipeline::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in the root
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:20:5
+   |
+20 | use bevy::sprite::SpriteBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0433]: failed to resolve: use of unresolved module or unlinked crate `common`
+  --> src\ai.rs:70:35
+   |
+70 |         let mut base_attributes = common::CoreAttributes { // Use common::CoreAttributes
+   |                                   ^^^^^^ use of unresolved module or unlinked crate `common`
+   |
+   = help: if you wanted to use a crate named `common`, use `cargo add common` to add it to your `Cargo.toml`
+help: consider importing this module
+   |
+1  + use crate::common;
+   |
+
+error[E0423]: expected value, found struct `EguiPlugin`
+   --> src\main.rs:607:22
+    |
+607 |         .add_plugins(EguiPlugin) // Corrected EguiPlugin initialization
+    |                      ^^^^^^^^^^ help: use struct literal syntax instead: `EguiPlugin { enable_multipass_for_primary_context: val }`
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bevy_egui-0.34.1\src\lib.rs:225:1
+    |
+225 | pub struct EguiPlugin {
+    | --------------------- `EguiPlugin` defined here
+
+warning: variable does not need to be mutable
+   --> src\simulation.rs:356:17
+    |
+356 |             let mut energy = Energy(200.0);
+    |                 ----^^^^^^
+    |                 |
+    |                 help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` on by default
+
+Some errors have detailed explanations: E0423, E0432, E0433.
+For more information about an error, try `rustc --explain E0423`.
+warning: `ai_simulation_v2` (bin "ai_simulation_v2") generated 1 warning
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 4 previous errors; 1 warning emitted
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::core_pipeline::Camera2dBundle`
+  --> src\main.rs:21:5
+   |
+21 | use bevy::core_pipeline::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in the root
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:22:5
+   |
+22 | use bevy::sprite::SpriteBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0423]: expected value, found struct `EguiPlugin`
+   --> src\main.rs:609:22
+    |
+609 |         .add_plugins(EguiPlugin) // Corrected EguiPlugin initialization (direct use for 0.34.1)
+    |                      ^^^^^^^^^^ help: use struct literal syntax instead: `EguiPlugin { enable_multipass_for_primary_context: val }`
+    |
+   ::: C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bevy_egui-0.34.1\src\lib.rs:225:1
+    |
+225 | pub struct EguiPlugin {
+    | --------------------- `EguiPlugin` defined here
+
+Some errors have detailed explanations: E0423, E0432.
+For more information about an error, try `rustc --explain E0423`.
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 3 previous errors
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved imports `bevy::prelude::Camera2dBundle`, `bevy::prelude::SpriteBundle`
+  --> src\main.rs:18:5
+   |
+18 |     Camera2dBundle, SpriteBundle, // Explicitly importing from prelude as they are there in 0.16.1
+   |     ^^^^^^^^^^^^^^  ^^^^^^^^^^^^ no `SpriteBundle` in `prelude`
+   |     |
+   |     no `Camera2dBundle` in `prelude`
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::core_pipeline::Camera2dBundle`
+  --> src\main.rs:20:5
+   |
+20 | use bevy::core_pipeline::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in the root
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:21:5
+   |
+21 | use bevy::sprite::SpriteBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors
+
+C:\Users\schro\AI_Simulation>rustc --explain E0432
+An import was unresolved.
+
+Erroneous code example:
+
+```
+use something::Foo; // error: unresolved import `something::Foo`.
+```
+
+In Rust 2015, paths in `use` statements are relative to the crate root. To
+import items relative to the current and parent modules, use the `self::` and
+`super::` prefixes, respectively.
+
+In Rust 2018 or later, paths in `use` statements are relative to the current
+module unless they begin with the name of a crate or a literal `crate::`, in
+which case they start from the crate root. As in Rust 2015 code, the `self::`
+and `super::` prefixes refer to the current and parent modules respectively.
+
+Also verify that you didn't misspell the import name and that the import exists
+in the module from where you tried to import it. Example:
+
+```
+use self::something::Foo; // Ok.
+
+mod something {
+    pub struct Foo;
+}
+```
+
+If you tried to use a module from an external crate and are using Rust 2015,
+you may have missed the `extern crate` declaration (which is usually placed in
+the crate root):
+
+```
+extern crate core; // Required to use the `core` crate in Rust 2015.
+
+use core::any;
+```
+
+Since Rust 2018 the `extern crate` declaration is not required and
+you can instead just `use` it:
+
+```
+use core::any; // No extern crate required in Rust 2018.
+```
+
+
+C:\Users\schro\AI_Simulation>rustc --explain E0432
+An import was unresolved.
+
+Erroneous code example:
+
+```
+use something::Foo; // error: unresolved import `something::Foo`.
+```
+
+In Rust 2015, paths in `use` statements are relative to the crate root. To
+import items relative to the current and parent modules, use the `self::` and
+`super::` prefixes, respectively.
+
+In Rust 2018 or later, paths in `use` statements are relative to the current
+module unless they begin with the name of a crate or a literal `crate::`, in
+which case they start from the crate root. As in Rust 2015 code, the `self::`
+and `super::` prefixes refer to the current and parent modules respectively.
+
+Also verify that you didn't misspell the import name and that the import exists
+in the module from where you tried to import it. Example:
+
+```
+use self::something::Foo; // Ok.
+
+mod something {
+    pub struct Foo;
+}
+```
+
+If you tried to use a module from an external crate and are using Rust 2015,
+you may have missed the `extern crate` declaration (which is usually placed in
+the crate root):
+
+```
+extern crate core; // Required to use the `core` crate in Rust 2015.
+
+use core::any;
+```
+
+Since Rust 2018 the `extern crate` declaration is not required and
+you can instead just `use` it:
+
+```
+use core::any; // No extern crate required in Rust 2018.
+```
+
+
+C:\Users\schro\AI_Simulation>
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error: expected `;`, found `#`
+   --> src\main.rs:619:49
+    |
+619 |         .add_systems(Update, ai_movement_system)
+    |                                                 ^ help: add `;` here
+620 | #![allow(unused_imports)] // Temporarily allow unused imports for components that are passed around
+    | - unexpected token
+
+error: an inner attribute is not permitted in this context
+   --> src\main.rs:620:1
+    |
+620 | #![allow(unused_imports)] // Temporarily allow unused imports for components that are passed around
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+623 | use std::collections::{HashMap, BTreeSet};
+    | ------------------------------------------ the inner attribute doesn't annotate this `use` import
+    |
+    = note: inner attributes, like `#![no_std]`, annotate the item enclosing them, and are usually found at the beginning of source files
+help: to annotate the `use` import, change the attribute from inner to outer style
+    |
+620 - #![allow(unused_imports)] // Temporarily allow unused imports for components that are passed around
+620 + #[allow(unused_imports)] // Temporarily allow unused imports for components that are passed around
+    |
+
+error: expected expression, found keyword `mut`
+   --> src\main.rs:820:49
+    |
+820 |         &mut Coherence, &mut Adaptability, &mut mut Resilience, &mut ReplicationEfficiency,
+    |                                                 ^^^ expected expression
+
+error: expected type, found keyword `mut`
+   --> src\main.rs:820:49
+    |
+820 |         &mut Coherence, &mut Adaptability, &mut mut Resilience, &mut ReplicationEfficiency,
+    |                                                 ^^^ expected type
+    |
+help: expressions must be enclosed in braces to be used as const generic arguments
+    |
+818 ~     mut ai_query: Query<{ (
+819 |         &mut Health, &mut Energy, &mut ProcessingPower, &mut Memory,
+...
+822 |         &AIType, &EthicalDirectives, &mut IsAlive, // `IsAlive` needs to be mutable to set to false
+823 ~     ) }, With<IndividualAI>>,
+    |
+
+error: expected expression, found `.`
+    --> src\main.rs:1249:9
+     |
+1249 |         .add_systems(Update, simulation_end_system)
+     |         ^ expected expression
+
+error: cannot declare a non-inline module inside a block unless it has a path attribute
+   --> src\main.rs:647:1
+    |
+647 | mod common;
+    | ^^^^^^^^^^^
+    |
+note: maybe `use` the module `common` instead of redeclaring it
+   --> src\main.rs:647:1
+    |
+647 | mod common;
+    | ^^^^^^^^^^^
+
+error: cannot declare a non-inline module inside a block unless it has a path attribute
+   --> src\main.rs:648:1
+    |
+648 | mod ai;
+    | ^^^^^^^
+    |
+note: maybe `use` the module `ai` instead of redeclaring it
+   --> src\main.rs:648:1
+    |
+648 | mod ai;
+    | ^^^^^^^
+
+error: cannot declare a non-inline module inside a block unless it has a path attribute
+   --> src\main.rs:649:1
+    |
+649 | mod simulation;
+    | ^^^^^^^^^^^^^^^
+    |
+note: maybe `use` the module `simulation` instead of redeclaring it
+   --> src\main.rs:649:1
+    |
+649 | mod simulation;
+    | ^^^^^^^^^^^^^^^
+
+error[E0432]: unresolved import `bevy::core_pipeline::Camera2dBundle`
+  --> src\main.rs:20:5
+   |
+20 | use bevy::core_pipeline::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in the root
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:21:5
+   |
+21 | use bevy::sprite::SpriteBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0432]: unresolved import `bevy::render::camera::Camera2dBundle`
+   --> src\main.rs:640:5
+    |
+640 | use bevy::render::camera::Camera2dBundle;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `camera`
+    |
+help: consider importing this unresolved item through its public re-export instead
+    |
+640 - use bevy::render::camera::Camera2dBundle;
+640 + use crate::Camera2dBundle;
+    |
+
+error[E0432]: unresolved import `bevy::render::sprite`
+   --> src\main.rs:641:19
+    |
+641 | use bevy::render::sprite::SpriteBundle;
+    |                   ^^^^^^ could not find `sprite` in `render`
+
+error[E0747]: constant provided when a type was expected
+   --> src\main.rs:818:25
+    |
+818 |       mut ai_query: Query<(
+    |  _________________________^
+819 | |         &mut Health, &mut Energy, &mut ProcessingPower, &mut Memory,
+820 | |         &mut Coherence, &mut Adaptability, &mut mut Resilience, &mut ReplicationEfficiency,
+821 | |         &mut LastAction, &mut KnowledgeBase, &mut CombatStrength, &mut DefenseStrength,
+822 | |         &AIType, &EthicalDirectives, &mut IsAlive, // `IsAlive` needs to be mutable to set to false
+823 | |     ), With<IndividualAI>>,
+    | |_____^
+
+Some errors have detailed explanations: E0432, E0747.
+For more information about an error, try `rustc --explain E0432`.
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 13 previous errors
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved imports `bevy::prelude::Camera2dBundle`, `bevy::prelude::SpriteBundle`
+  --> src\main.rs:18:5
+   |
+18 |     Camera2dBundle, SpriteBundle, // These are expected to be in bevy::prelude for 0.16.1
+   |     ^^^^^^^^^^^^^^  ^^^^^^^^^^^^ no `SpriteBundle` in `prelude`
+   |     |
+   |     no `Camera2dBundle` in `prelude`
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::core_pipeline::core_2d::Camera2dBundle`
+  --> src\main.rs:18:5
+   |
+18 | use bevy::core_pipeline::core_2d::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `core_2d`
+
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:19:5
+   |
+19 | use bevy::sprite::SpriteBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0422]: cannot find struct, variant or union type `Sprite` in this scope
+   --> src\main.rs:136:25
+    |
+136 |                 sprite: Sprite {
+    |                         ^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+4   + use bevy::prelude::Sprite;
+    |
+4   + use bevy_sprite::Sprite;
+    |
+
+error[E0422]: cannot find struct, variant or union type `Sprite` in this scope
+   --> src\main.rs:157:21
+    |
+157 |             sprite: Sprite {
+    |                     ^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+4   + use bevy::prelude::Sprite;
+    |
+4   + use bevy_sprite::Sprite;
+    |
+
+error[E0422]: cannot find struct, variant or union type `Sprite` in this scope
+   --> src\main.rs:366:25
+    |
+366 |                 sprite: Sprite {
+    |                         ^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+4   + use bevy::prelude::Sprite;
+    |
+4   + use bevy_sprite::Sprite;
+    |
+
+error[E0412]: cannot find type `Sprite` in this scope
+   --> src\main.rs:458:48
+    |
+458 |     mut monoculture_query: Query<(Entity, &mut Sprite, &mut Transform), With<MonocultureVisual>>,
+    |                                                ^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+4   + use bevy::prelude::Sprite;
+    |
+4   + use bevy_sprite::Sprite;
+    |
+
+error[E0422]: cannot find struct, variant or union type `Sprite` in this scope
+   --> src\main.rs:473:33
+    |
+473 |                         sprite: Sprite {
+    |                                 ^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+4   + use bevy::prelude::Sprite;
+    |
+4   + use bevy_sprite::Sprite;
+    |
+
+error[E0412]: cannot find type `Sprite` in this scope
+   --> src\main.rs:502:42
+    |
+502 |     mut godai_query: Query<(Entity, &mut Sprite, &mut Transform), With<GodaiVisual>>,
+    |                                          ^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+4   + use bevy::prelude::Sprite;
+    |
+4   + use bevy_sprite::Sprite;
+    |
+
+error[E0422]: cannot find struct, variant or union type `Sprite` in this scope
+   --> src\main.rs:516:29
+    |
+516 |                     sprite: Sprite {
+    |                             ^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+4   + use bevy::prelude::Sprite;
+    |
+4   + use bevy_sprite::Sprite;
+    |
+
+Some errors have detailed explanations: E0412, E0422, E0432.
+For more information about an error, try `rustc --explain E0412`.
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 9 previous errors
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved imports `bevy_sprite::SpriteBundle`, `bevy_sprite::Camera2dBundle`
+  --> src\main.rs:18:27
+   |
+18 | use bevy_sprite::{Sprite, SpriteBundle, Camera2dBundle};
+   |                           ^^^^^^^^^^^^  ^^^^^^^^^^^^^^ no `Camera2dBundle` in the root
+   |                           |
+   |                           no `SpriteBundle` in the root
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 1 previous error
+
+C:\Users\schro\AI_Simulation>cargo run --release
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0432]: unresolved import `bevy::sprite::SpriteBundle`
+  --> src\main.rs:18:28
+   |
+18 | use bevy::sprite::{Sprite, SpriteBundle};
+   |                            ^^^^^^^^^^^^ no `SpriteBundle` in the root
+
+error[E0432]: unresolved import `bevy::core_pipeline::core_2d::Camera2dBundle`
+  --> src\main.rs:19:5
+   |
+19 | use bevy::core_pipeline::core_2d::Camera2dBundle;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Camera2dBundle` in `core_2d`
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 2 previous errors
+
+C:\Users\schro\AI_Simulation>cargo run --release
+    Updating crates.io index
+error: failed to select a version for `web-sys`.
+    ... required by package `wgpu v0.12.0`
+    ... which satisfies dependency `wgpu = "^0.12.0"` of package `bevy_egui v0.10.0`
+    ... which satisfies dependency `bevy_egui = "^0.10"` of package `ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)`
+versions that meet the requirements `^0.3.53` are: 0.3.77, 0.3.76, 0.3.75, 0.3.74, 0.3.73, 0.3.72, 0.3.70, 0.3.69, 0.3.68, 0.3.67, 0.3.66, 0.3.65, 0.3.64, 0.3.63, 0.3.62, 0.3.61, 0.3.60, 0.3.59, 0.3.58, 0.3.57, 0.3.56, 0.3.55, 0.3.54, 0.3.53
+
+the package `wgpu` depends on `web-sys`, with features: `GpuBufferUsage` but `web-sys` does not have these features.
+
+
+all possible versions conflict with previously selected packages.
+
+  previously selected package `web-sys v0.3.72`
+    ... which satisfies dependency `web-sys = "^0.3.53"` of package `wgpu v0.12.0`
+    ... which satisfies dependency `wgpu = "^0.12.0"` of package `bevy_egui v0.10.0`
+    ... which satisfies dependency `bevy_egui = "^0.10"` of package `ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)`
+
+failed to select a version for `web-sys` which could resolve this conflict
+
+C:\Users\schro\AI_Simulation>cargo clean
+     Removed 3368 files, 1.8GiB total
+
+C:\Users\schro\AI_Simulation>cargo upgrade
+error: no such command: `upgrade`
+
+help: a command with a similar name exists: `update`
+
+help: view all installed commands with `cargo --list`
+help: find a package to install `upgrade` with `cargo search cargo-upgrade`
+
+C:\Users\schro\AI_Simulation>cargo update
+    Updating crates.io index
+error: failed to select a version for `web-sys`.
+    ... required by package `wgpu v0.12.0`
+    ... which satisfies dependency `wgpu = "^0.12.0"` of package `bevy_egui v0.10.0`
+    ... which satisfies dependency `bevy_egui = "^0.10"` of package `ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)`
+versions that meet the requirements `^0.3.53` are: 0.3.77, 0.3.76, 0.3.75, 0.3.74, 0.3.73, 0.3.72, 0.3.70, 0.3.69, 0.3.68, 0.3.67, 0.3.66, 0.3.65, 0.3.64, 0.3.63, 0.3.62, 0.3.61, 0.3.60, 0.3.59, 0.3.58, 0.3.57, 0.3.56, 0.3.55, 0.3.54, 0.3.53
+
+the package `wgpu` depends on `web-sys`, with features: `GpuBufferUsage` but `web-sys` does not have these features.
+
+
+all possible versions conflict with previously selected packages.
+
+  previously selected package `web-sys v0.3.72`
+    ... which satisfies dependency `web-sys = "^0.3.53"` of package `wgpu v0.12.0`
+    ... which satisfies dependency `wgpu = "^0.12.0"` of package `bevy_egui v0.10.0`
+    ... which satisfies dependency `bevy_egui = "^0.10"` of package `ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)`
+
+failed to select a version for `web-sys` which could resolve this conflict
+
+C:\Users\schro\AI_Simulation>cargo clean
+     Removed 0 files
+
+C:\Users\schro\AI_Simulation>cargo update
+    Updating crates.io index
+     Locking 153 packages to latest compatible versions
+ Downgrading accesskit v0.18.0 -> v0.10.1
+ Downgrading accesskit_consumer v0.27.0 -> v0.14.1
+ Downgrading accesskit_macos v0.19.0 -> v0.6.2
+ Downgrading accesskit_windows v0.25.0 -> v0.13.2
+ Downgrading accesskit_winit v0.25.0 -> v0.12.4
+      Adding addr2line v0.24.2
+      Adding ahash v0.7.8
+    Removing aligned-vec v0.5.0
+      Adding allocator-api2 v0.2.21
+ Downgrading android-activity v0.6.0 -> v0.4.3
+ Downgrading android_log-sys v0.3.2 -> v0.2.0
+    Removing arbitrary v1.4.1
+    Removing arg_enum_proc_macro v0.3.4
+    Removing arrayref v0.3.9
+    Removing as-raw-xcb-connection v1.0.1
+ Downgrading ash v0.38.0+1.3.281 -> v0.37.3+1.3.251
+    Removing assert_type_match v0.1.1
+    Removing async-broadcast v0.7.2
+ Downgrading async-channel v2.3.1 -> v1.9.0
+    Removing async-fs v2.1.2
+    Removing async-lock v3.4.0
+    Removing atomic-waker v1.1.2
+      Adding atomic_refcell v0.1.13
+    Removing atomicow v1.1.0
+    Removing av1-grain v0.2.4
+    Removing avif-serialize v0.8.3
+      Adding backtrace v0.3.75
+ Downgrading base64 v0.22.1 -> v0.13.1
+ Downgrading bevy v0.16.1 -> v0.10.1 (available: v0.16.1)
+ Downgrading bevy_a11y v0.16.1 -> v0.10.1
+ Downgrading bevy_animation v0.16.1 -> v0.10.1
+ Downgrading bevy_app v0.16.1 -> v0.10.1
+ Downgrading bevy_asset v0.16.1 -> v0.10.1
+    Removing bevy_asset_macros v0.16.1
+ Downgrading bevy_audio v0.16.1 -> v0.10.1
+    Removing bevy_color v0.16.2
+      Adding bevy_core v0.10.1
+ Downgrading bevy_core_pipeline v0.16.1 -> v0.10.1
+ Downgrading bevy_derive v0.16.1 -> v0.10.1
+ Downgrading bevy_diagnostic v0.16.1 -> v0.10.1
+ Downgrading bevy_ecs v0.16.1 -> v0.10.1
+ Downgrading bevy_ecs_macros v0.16.1 -> v0.10.1
+ Downgrading bevy_egui v0.34.1 -> v0.20.3 (available: v0.34.1)
+ Downgrading bevy_encase_derive v0.16.1 -> v0.10.1
+ Downgrading bevy_gilrs v0.16.1 -> v0.10.1
+    Removing bevy_gizmos v0.16.1
+    Removing bevy_gizmos_macros v0.16.1
+ Downgrading bevy_gltf v0.16.1 -> v0.10.1
+      Adding bevy_hierarchy v0.10.1
+    Removing bevy_image v0.16.1
+ Downgrading bevy_input v0.16.1 -> v0.10.1
+    Removing bevy_input_focus v0.16.1
+ Downgrading bevy_internal v0.16.1 -> v0.10.1
+ Downgrading bevy_log v0.16.1 -> v0.10.1
+ Downgrading bevy_macro_utils v0.16.1 -> v0.10.1
+ Downgrading bevy_math v0.16.1 -> v0.10.1
+    Removing bevy_mesh v0.16.1
+ Downgrading bevy_mikktspace v0.16.1 -> v0.10.1
+ Downgrading bevy_pbr v0.16.1 -> v0.10.1
+    Removing bevy_picking v0.16.1
+    Removing bevy_platform v0.16.1
+ Downgrading bevy_ptr v0.16.1 -> v0.10.1
+ Downgrading bevy_reflect v0.16.1 -> v0.10.1
+ Downgrading bevy_reflect_derive v0.16.1 -> v0.10.1
+ Downgrading bevy_render v0.16.1 -> v0.10.1
+ Downgrading bevy_render_macros v0.16.1 -> v0.10.1
+ Downgrading bevy_scene v0.16.1 -> v0.10.1
+ Downgrading bevy_sprite v0.16.1 -> v0.10.1
+    Removing bevy_state v0.16.1
+    Removing bevy_state_macros v0.16.1
+ Downgrading bevy_tasks v0.16.1 -> v0.10.1
+ Downgrading bevy_text v0.16.1 -> v0.10.1
+ Downgrading bevy_time v0.16.1 -> v0.10.1
+ Downgrading bevy_transform v0.16.1 -> v0.10.1
+ Downgrading bevy_ui v0.16.1 -> v0.10.1
+ Downgrading bevy_utils v0.16.1 -> v0.10.1
+      Adding bevy_utils_proc_macros v0.10.1
+ Downgrading bevy_window v0.16.1 -> v0.10.1
+ Downgrading bevy_winit v0.16.1 -> v0.10.1
+    Removing bit-set v0.8.0
+    Removing bit-vec v0.8.0
+    Removing bit_field v0.10.2
+    Removing bitstream-io v2.6.0
+    Removing blake3 v1.8.2
+      Adding block-sys v0.1.0-beta.1 (available: v0.1.0-beta.2)
+ Downgrading block2 v0.5.1 -> v0.2.0-alpha.6 (available: v0.2.0)
+    Removing blocking v1.6.1
+    Removing built v0.7.7
+    Removing calloop v0.13.0
+    Removing calloop-wayland-source v0.3.0
+    Removing cfg-expr v0.15.8
+      Adding cfg_aliases v0.1.1
+      Adding com-rs v0.2.1
+    Removing const-fnv1a-hash v1.1.0
+    Removing const_soft_float v0.1.4
+    Removing constant_time_eq v0.3.1
+    Removing constgebra v0.1.4
+    Removing core-foundation v0.10.1
+ Downgrading core-graphics v0.23.2 -> v0.22.3
+    Removing cosmic-text v0.13.2
+    Removing critical-section v1.2.0
+    Removing crossbeam-queue v0.3.12
+    Removing crunchy v0.2.3
+    Removing ctrlc v3.4.7
+    Removing cursor-icon v1.2.0
+      Adding d3d12 v0.6.0
+    Removing data-encoding v2.9.0
+    Removing derive_more v1.0.0
+    Removing derive_more-impl v1.0.0
+    Removing disqualified v1.0.0
+    Removing dlib v0.5.2
+    Removing document-features v0.2.11
+    Removing downcast-rs v2.0.1
+    Removing dpi v0.1.2
+ Downgrading ecolor v0.31.1 -> v0.21.0
+ Downgrading egui v0.31.1 -> v0.21.0
+ Downgrading emath v0.31.1 -> v0.21.0
+ Downgrading encase v0.10.0 -> v0.5.0
+ Downgrading encase_derive v0.10.0 -> v0.5.0
+ Downgrading encase_derive_impl v0.10.0 -> v0.5.0
+ Downgrading epaint v0.31.1 -> v0.21.0
+    Removing epaint_default_fonts v0.31.1
+ Downgrading erased-serde v0.4.6 -> v0.3.31
+ Downgrading event-listener v5.4.0 -> v2.5.3
+    Removing event-listener-strategy v0.5.4
+    Removing exr v1.73.0
+      Adding fastrand v1.9.0
+      Adding filetime v0.2.25
+ Downgrading fixedbitset v0.5.7 -> v0.4.2
+    Removing foldhash v0.1.5
+    Removing font-types v0.9.0
+    Removing fontconfig-parser v0.5.8
+    Removing fontdb v0.16.2
+ Downgrading foreign-types v0.5.0 -> v0.3.2
+    Removing foreign-types-macros v0.2.3
+ Downgrading foreign-types-shared v0.3.1 -> v0.1.1
+      Adding fsevent-sys v4.1.0
+    Removing futures-channel v0.3.31
+      Adding futures-lite v1.13.0
+      Adding fxhash v0.2.1
+    Removing gif v0.13.1
+ Downgrading gilrs v0.11.0 -> v0.10.10
+ Downgrading gilrs-core v0.6.4 -> v0.5.15
+      Adding gimli v0.31.1
+    Removing gl_generator v0.14.0
+ Downgrading glam v0.29.3 -> v0.23.0
+ Downgrading glow v0.16.0 -> v0.12.3
+    Removing glutin_wgl_sys v0.6.1
+      Adding glyph_brush_layout v0.2.4
+ Downgrading gpu-alloc v0.6.0 -> v0.5.4
+ Downgrading gpu-alloc-types v0.3.0 -> v0.2.0
+ Downgrading gpu-allocator v0.27.0 -> v0.22.0
+ Downgrading gpu-descriptor v0.3.2 -> v0.2.4
+ Downgrading gpu-descriptor-types v0.2.0 -> v0.1.2
+ Downgrading grid v0.15.0 -> v0.10.0
+    Removing half v2.6.0
+    Removing hash32 v0.3.1
+      Adding hashbrown v0.12.3
+      Adding hashbrown v0.14.5
+      Adding hassle-rs v0.9.0
+    Removing heapless v0.8.0
+    Removing heck v0.5.0
+    Removing hermit-abi v0.5.1
+ Downgrading hexasphere v15.1.0 -> v8.1.0
+      Adding image v0.24.9
+    Removing image-webp v0.2.1
+    Removing imgref v1.11.0
+    Removing immutable-chunkmap v2.0.6
+      Adding indexmap v1.9.3
+    Removing inotify v0.11.0
+      Adding inotify v0.9.6
+      Adding inotify v0.10.2
+      Adding instant v0.1.13
+    Removing interpolate_name v0.2.4
+    Removing itertools v0.12.1
+    Removing itertools v0.14.0
+ Downgrading khronos-egl v6.0.0 -> v4.1.0
+    Removing khronos_api v3.1.0
+      Adding kqueue v1.1.1
+      Adding kqueue-sys v1.0.4
+    Removing lebe v0.5.2
+    Removing libfuzzer-sys v0.4.9
+      Adding libloading v0.7.4
+    Removing libm v0.2.15
+    Removing linux-raw-sys v0.9.4
+    Removing litrs v0.4.1
+    Removing loop9 v0.1.5
+    Removing maybe-rayon v0.1.1
+    Removing memmap2 v0.9.5
+ Downgrading metal v0.31.0 -> v0.24.0
+      Adding mio v0.8.11
+ Downgrading naga v24.0.0 -> v0.11.1
+    Removing naga_oil v0.17.1
+ Downgrading ndk v0.9.0 -> v0.7.0
+ Downgrading ndk-sys v0.6.0+11769913 -> v0.4.1+23.1.7779620
+    Removing new_debug_unreachable v1.0.6
+    Removing nix v0.30.1
+    Removing nonmax v0.5.5
+    Removing noop_proc_macro v0.3.0
+      Adding notify v5.2.0
+    Removing num-bigint v0.4.6
+      Adding num-derive v0.3.3
+    Removing num-integer v0.1.46
+    Removing num-rational v0.4.2
+      Adding num_enum v0.5.11
+      Adding num_enum v0.6.1
+      Adding num_enum_derive v0.5.11
+      Adding num_enum_derive v0.6.1
+ Downgrading objc-sys v0.3.5 -> v0.2.0-beta.2 (available: v0.2.0-beta.3)
+ Downgrading objc2 v0.5.2 -> v0.3.0-beta.3.patch-leaks.3 (available: v0.3.0-beta.5)
+    Removing objc2-app-kit v0.2.2
+    Removing objc2-cloud-kit v0.2.2
+    Removing objc2-contacts v0.2.2
+    Removing objc2-core-data v0.2.2
+    Removing objc2-core-image v0.2.2
+    Removing objc2-core-location v0.2.2
+      Adding objc2-encode v2.0.0-pre.2 (available: v2.0.0)
+    Removing objc2-foundation v0.2.2
+    Removing objc2-link-presentation v0.2.2
+    Removing objc2-metal v0.2.2
+    Removing objc2-quartz-core v0.2.2
+    Removing objc2-symbols v0.2.2
+    Removing objc2-ui-kit v0.2.2
+    Removing objc2-uniform-type-identifiers v0.2.2
+    Removing objc2-user-notifications v0.2.2
+      Adding objc_exception v0.1.2
+      Adding object v0.36.7
+      Adding oboe v0.5.0
+      Adding oboe-sys v0.5.0
+    Removing offset-allocator v0.2.0
+    Removing ordered-float v4.6.0
+ Downgrading petgraph v0.7.1 -> v0.6.5
+    Removing pin-project v1.1.10
+    Removing pin-project-internal v1.1.10
+    Removing piper v0.2.4
+    Removing polling v3.8.0
+    Removing portable-atomic v1.11.0
+    Removing portable-atomic-util v0.2.4
+    Removing presser v0.3.1
+    Removing prettyplease v0.2.33
+      Adding proc-macro-crate v1.3.1
+    Removing profiling-procmacros v1.0.16
+    Removing qoi v0.4.1
+    Removing quick-error v2.0.1
+    Removing quick-xml v0.37.5
+    Removing rand_distr v0.4.3
+    Removing rangemap v1.5.1
+    Removing rav1e v0.7.1
+    Removing ravif v0.11.12
+ Downgrading raw-window-handle v0.6.2 -> v0.5.2
+    Removing read-fonts v0.29.2
+ Downgrading redox_syscall v0.4.1 -> v0.3.5
+ Downgrading renderdoc-sys v1.1.0 -> v0.7.1
+    Removing rgb v0.8.50
+ Downgrading rodio v0.20.1 -> v0.17.3
+    Removing roxmltree v0.20.0
+      Adding rustc-demangle v0.1.24
+    Removing rustix v1.0.7
+    Removing rustybuzz v0.14.1
+ Downgrading ruzstd v0.8.1 -> v0.2.4
+    Removing scoped-tls v1.0.1
+    Removing sctk-adwaita v0.10.1
+    Removing self_cell v1.2.0
+    Removing send_wrapper v0.6.0
+    Removing serde_spanned v0.6.8
+    Removing simd_helpers v0.1.0
+    Removing skrifa v0.31.3
+    Removing smithay-client-toolkit v0.19.2
+    Removing smol_str v0.2.2
+    Removing spin v0.9.8
+ Downgrading spirv v0.3.0+sdk-1.3.268.0 -> v0.2.0+1.5.4
+    Removing stackfuture v0.3.0
+    Removing strict-num v0.1.1
+    Removing strum v0.26.3
+    Removing strum_macros v0.26.4
+    Removing swash v0.2.5
+      Adding syn v1.0.109
+    Removing sys-locale v0.3.2
+ Downgrading sysinfo v0.34.2 -> v0.28.4
+    Removing system-deps v6.2.2
+ Downgrading taffy v0.7.7 -> v0.3.19
+    Removing target-lexicon v0.12.16
+    Removing thiserror v2.0.12
+    Removing thiserror-impl v2.0.12
+    Removing tiny-skia v0.11.4
+    Removing tiny-skia-path v0.11.4
+    Removing toml v0.8.22
+      Adding toml_edit v0.19.15
+      Adding tracing-log v0.1.4
+    Removing tracing-oslog v0.2.0
+    Removing ttf-parser v0.20.0
+    Removing ttf-parser v0.21.1
+ Downgrading twox-hash v2.1.0 -> v1.6.3
+    Removing typeid v1.0.3
+    Removing unicode-bidi v0.3.18
+    Removing unicode-bidi-mirroring v0.2.0
+    Removing unicode-ccc v0.2.0
+    Removing unicode-linebreak v0.1.5
+    Removing unicode-properties v0.1.3
+    Removing unicode-script v0.5.7
+    Removing unicode-segmentation v1.12.0
+    Removing v_frame v0.3.8
+    Removing variadics_please v1.1.0
+    Removing version-compare v0.2.0
+      Adding waker-fn v1.2.0
+ Downgrading wasm-bindgen-futures v0.4.50 -> v0.4.45 (available: v0.4.50)
+    Removing wayland-backend v0.3.10
+    Removing wayland-client v0.31.10
+    Removing wayland-csd-frame v0.3.0
+    Removing wayland-cursor v0.31.10
+    Removing wayland-protocols v0.32.8
+    Removing wayland-protocols-plasma v0.3.8
+    Removing wayland-protocols-wlr v0.3.8
+ Downgrading wayland-scanner v0.31.6 -> v0.29.5
+    Removing wayland-sys v0.31.6
+ Downgrading web-sys v0.3.77 -> v0.3.72 (available: v0.3.77)
+    Removing web-time v1.1.0
+ Downgrading webbrowser v1.0.4 -> v0.8.15
+ Downgrading wgpu v24.0.5 -> v0.15.1
+ Downgrading wgpu-core v24.0.5 -> v0.15.1
+ Downgrading wgpu-hal v24.0.4 -> v0.15.4
+ Downgrading wgpu-types v24.0.0 -> v0.15.2
+      Adding widestring v0.5.1
+    Removing windows v0.57.0
+    Removing windows v0.61.1
+      Adding windows v0.44.0
+    Removing windows-collections v0.2.0
+    Removing windows-core v0.57.0
+    Removing windows-core v0.61.2
+    Removing windows-future v0.2.1
+    Removing windows-implement v0.57.0
+    Removing windows-implement v0.60.0
+      Adding windows-implement v0.44.0
+    Removing windows-interface v0.57.0
+    Removing windows-interface v0.59.1
+      Adding windows-interface v0.44.0
+    Removing windows-link v0.1.1
+    Removing windows-numerics v0.2.0
+    Removing windows-result v0.3.4
+    Removing windows-strings v0.4.2
+ Downgrading windows-sys v0.52.0 -> v0.48.0
+    Removing windows-threading v0.1.0
+ Downgrading winit v0.30.11 -> v0.28.7
+      Adding winnow v0.5.40
+    Removing xcursor v0.3.8
+      Adding xi-unicode v0.3.0
+    Removing xkbcommon-dl v0.4.2
+    Removing xkeysym v0.2.1
+    Removing yazi v0.2.1
+    Removing zeno v0.3.3
+    Removing zune-core v0.4.12
+    Removing zune-inflate v0.2.54
+    Removing zune-jpeg v0.4.14
+note: pass `--verbose` to see 1 unchanged dependencies behind latest
+
+C:\Users\schro\AI_Simulation>cargo run --release
+  Downloaded async-channel v1.9.0
+  Downloaded cfg_aliases v0.1.1
+  Downloaded gpu-descriptor-types v0.1.2
+  Downloaded waker-fn v1.2.0
+  Downloaded windows-targets v0.42.2
+  Downloaded tracing-log v0.1.4
+  Downloaded webbrowser v0.8.15
+  Downloaded xi-unicode v0.3.0
+  Downloaded winnow v0.5.40
+  Downloaded widestring v0.5.1
+  Downloaded taffy v0.3.19
+  Downloaded sysinfo v0.28.4
+  Downloaded epaint v0.21.0
+  Downloaded ash v0.37.3+1.3.251
+  Downloaded winit v0.28.7
+  Downloaded walkdir v2.5.0
+  Downloaded renderdoc-sys v0.7.1
+  Downloaded ruzstd v0.2.4
+  Downloaded bevy_winit v0.10.1
+  Downloaded windows_x86_64_msvc v0.42.2
+  Downloaded bevy_sprite v0.10.1
+  Downloaded bevy_asset v0.10.1
+  Downloaded bevy_reflect v0.10.1
+  Downloaded bevy_render v0.10.1
+  Downloaded bevy_egui v0.20.3
+  Downloaded bevy_app v0.10.1
+  Downloaded accesskit_winit v0.12.4
+  Downloaded egui v0.21.0
+  Downloaded bevy_ecs v0.10.1
+  Downloaded accesskit_windows v0.13.2
+  Downloaded naga v0.11.1
+  Downloaded bevy v0.10.1
+  Downloaded accesskit_consumer v0.14.1
+  Downloaded accesskit v0.10.1
+  Downloaded hexasphere v8.1.0
+  Downloaded erased-serde v0.3.31
+  Downloaded bevy_core_pipeline v0.10.1
+  Downloaded encase v0.5.0
+  Downloaded bevy_ui v0.10.1
+  Downloaded bevy_tasks v0.10.1
+  Downloaded glam v0.23.0
+  Downloaded bevy_scene v0.10.1
+  Downloaded bevy_pbr v0.10.1
+  Downloaded bevy_reflect_derive v0.10.1
+  Downloaded windows-implement v0.44.0
+  Downloaded bevy_mikktspace v0.10.1
+  Downloaded bevy_macro_utils v0.10.1
+  Downloaded bevy_input v0.10.1
+  Downloaded windows-sys v0.45.0
+  Downloaded bevy_hierarchy v0.10.1
+  Downloaded bevy_diagnostic v0.10.1
+  Downloaded bevy_derive v0.10.1
+  Downloaded bevy_audio v0.10.1
+  Downloaded bevy_a11y v0.10.1
+  Downloaded image v0.24.9
+  Downloaded hassle-rs v0.9.0
+  Downloaded windows-interface v0.44.0
+  Downloaded wgpu-types v0.15.2
+  Downloaded encase_derive_impl v0.5.0
+  Downloaded encase_derive v0.5.0
+  Downloaded emath v0.21.0
+  Downloaded bevy_window v0.10.1
+  Downloaded bevy_utils_proc_macros v0.10.1
+  Downloaded bevy_utils v0.10.1
+  Downloaded bevy_transform v0.10.1
+  Downloaded bevy_time v0.10.1
+  Downloaded bevy_text v0.10.1
+  Downloaded bevy_render_macros v0.10.1
+  Downloaded bevy_ptr v0.10.1
+  Downloaded bevy_math v0.10.1
+  Downloaded bevy_log v0.10.1
+  Downloaded bevy_internal v0.10.1
+  Downloaded bevy_gltf v0.10.1
+  Downloaded bevy_gilrs v0.10.1
+  Downloaded bevy_encase_derive v0.10.1
+  Downloaded bevy_ecs_macros v0.10.1
+  Downloaded bevy_core v0.10.1
+  Downloaded bevy_animation v0.10.1
+  Downloaded twox-hash v1.6.3
+  Downloaded toml_edit v0.19.15
+  Downloaded petgraph v0.6.5
+  Downloaded syn v1.0.109
+  Downloaded hashbrown v0.14.5
+  Downloaded glow v0.12.3
+  Downloaded gilrs v0.10.10
+  Downloaded backtrace v0.3.75
+  Downloaded ahash v0.7.8
+  Downloaded spirv v0.2.0+1.5.4
+  Downloaded rustc-demangle v0.1.24
+  Downloaded rodio v0.17.3
+  Downloaded raw-window-handle v0.5.2
+  Downloaded notify v5.2.0
+  Downloaded libloading v0.7.4
+  Downloaded khronos-egl v4.1.0
+  Downloaded indexmap v1.9.3
+  Downloaded hashbrown v0.12.3
+  Downloaded gpu-allocator v0.22.0
+  Downloaded gpu-alloc v0.5.4
+  Downloaded gilrs-core v0.5.15
+  Downloaded futures-lite v1.13.0
+  Downloaded event-listener v2.5.3
+  Downloaded allocator-api2 v0.2.21
+  Downloaded same-file v1.0.6
+  Downloaded instant v0.1.13
+  Downloaded grid v0.10.0
+  Downloaded glyph_brush_layout v0.2.4
+  Downloaded fixedbitset v0.4.2
+  Downloaded filetime v0.2.25
+  Downloaded fastrand v1.9.0
+  Downloaded ecolor v0.21.0
+  Downloaded downcast-rs v1.2.1
+  Downloaded d3d12 v0.6.0
+  Downloaded com-rs v0.2.1
+  Downloaded block v0.1.6
+  Downloaded base64 v0.13.1
+  Downloaded gpu-descriptor v0.2.4
+  Downloaded gpu-alloc-types v0.2.0
+  Downloaded fxhash v0.2.1
+  Downloaded foreign-types-shared v0.1.1
+  Downloaded foreign-types v0.3.2
+  Downloaded wgpu-hal v0.15.4
+  Downloaded wgpu-core v0.15.1
+  Downloaded wgpu v0.15.1
+  Downloaded windows v0.44.0
+  Downloaded 124 crates (31.4MiB) in 31.12s (largest was `windows` at 11.0MiB)
+   Compiling proc-macro2 v1.0.95
+   Compiling unicode-ident v1.0.18
+   Compiling cfg-if v1.0.0
+   Compiling serde v1.0.219
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling autocfg v1.4.0
+   Compiling once_cell v1.21.3
+   Compiling syn v1.0.109
+   Compiling version_check v0.9.5
+   Compiling crossbeam-utils v0.8.21
+   Compiling thiserror v1.0.69
+   Compiling getrandom v0.3.3
+   Compiling parking_lot_core v0.9.11
+   Compiling hashbrown v0.15.3
+   Compiling memchr v2.7.4
+   Compiling equivalent v1.0.2
+   Compiling getrandom v0.2.16
+   Compiling indexmap v2.9.0
+   Compiling toml_datetime v0.6.9
+   Compiling winnow v0.5.40
+   Compiling ahash v0.7.8
+   Compiling pin-project-lite v0.2.16
+   Compiling scopeguard v1.2.0
+   Compiling fixedbitset v0.4.2
+   Compiling log v0.4.27
+   Compiling lock_api v0.4.13
+   Compiling winapi v0.3.9
+   Compiling windows-targets v0.52.6
+   Compiling toml_edit v0.19.15
+   Compiling tracing-core v0.1.33
+   Compiling bitflags v1.3.2
+   Compiling futures-core v0.3.31
+   Compiling slab v0.4.9
+   Compiling instant v0.1.13
+   Compiling rustc-hash v1.1.0
+   Compiling bit-vec v0.6.3
+   Compiling quote v1.0.40
+   Compiling concurrent-queue v2.5.0
+   Compiling petgraph v0.6.5
+   Compiling futures-lite v2.6.0
+   Compiling bit-set v0.5.3
+   Compiling parking v2.2.1
+   Compiling syn v2.0.101
+   Compiling tracing v0.1.41
+   Compiling uuid v1.17.0
+   Compiling fastrand v1.9.0
+   Compiling waker-fn v1.2.0
+   Compiling fastrand v2.3.0
+   Compiling futures-io v0.3.31
+   Compiling async-task v4.7.1
+   Compiling event-listener v2.5.3
+   Compiling async-channel v1.9.0
+   Compiling futures-lite v1.13.0
+   Compiling thread_local v1.1.8
+   Compiling async-executor v1.13.2
+   Compiling bevy_ptr v0.10.1
+   Compiling downcast-rs v1.2.1
+   Compiling windows_x86_64_msvc v0.42.2
+   Compiling num-traits v0.2.19
+   Compiling windows-sys v0.59.0
+   Compiling zerocopy v0.8.25
+   Compiling libc v0.2.172
+   Compiling aho-corasick v1.1.3
+   Compiling byteorder v1.5.0
+   Compiling regex-syntax v0.8.5
+   Compiling bevy_macro_utils v0.10.1
+   Compiling bevy_tasks v0.10.1
+   Compiling lazy_static v1.5.0
+   Compiling regex-syntax v0.6.29
+   Compiling overload v0.1.1
+   Compiling sharded-slab v0.1.7
+   Compiling windows-targets v0.42.2
+   Compiling tracing-log v0.2.0
+   Compiling ahash v0.8.12
+   Compiling tracing-log v0.1.4
+   Compiling windows-sys v0.45.0
+   Compiling simd-adler32 v0.3.7
+   Compiling bevy_utils_proc_macros v0.10.1
+   Compiling bevy_reflect_derive v0.10.1
+   Compiling bevy_ecs_macros v0.10.1
+   Compiling bevy_derive v0.10.1
+   Compiling winapi-util v0.1.9
+   Compiling regex-automata v0.4.9
+   Compiling windows-implement v0.44.0
+   Compiling windows-interface v0.44.0
+   Compiling synstructure v0.13.2
+   Compiling arrayvec v0.7.6
+   Compiling ntapi v0.4.1
+   Compiling raw-window-handle v0.5.2
+   Compiling regex-automata v0.1.10
+   Compiling crossbeam-channel v0.5.15
+   Compiling indexmap v1.9.3
+   Compiling com-rs v0.2.1
+   Compiling adler2 v2.0.0
+   Compiling windows v0.44.0
+   Compiling termcolor v1.4.1
+   Compiling miniz_oxide v0.8.8
+   Compiling same-file v1.0.6
+   Compiling crc32fast v1.4.2
+   Compiling unicode-xid v0.2.6
+   Compiling anyhow v1.0.98
+   Compiling nu-ansi-term v0.46.0
+   Compiling libloading v0.7.4
+   Compiling serde_derive v1.0.219
+   Compiling bytemuck_derive v1.9.3
+   Compiling thiserror-impl v1.0.69
+   Compiling regex v1.11.1
+   Compiling zerofrom-derive v0.1.6
+   Compiling matchers v0.1.0
+   Compiling rustc-demangle v0.1.24
+   Compiling allocator-api2 v0.2.21
+   Compiling khronos-egl v4.1.0
+   Compiling unicode-width v0.1.14
+   Compiling ash v0.37.3+1.3.251
+   Compiling bytemuck v1.23.0
+   Compiling hashbrown v0.14.5
+   Compiling codespan-reporting v0.11.1
+   Compiling sysinfo v0.28.4
+   Compiling flate2 v1.1.1
+   Compiling backtrace v0.3.75
+   Compiling yoke-derive v0.8.0
+   Compiling pp-rs v0.2.1
+   Compiling zerofrom v0.1.6
+   Compiling walkdir v2.5.0
+   Compiling spirv v0.2.0+1.5.4
+   Compiling fdeflate v0.3.7
+   Compiling filetime v0.2.25
+   Compiling gpu-alloc-types v0.2.0
+   Compiling stable_deref_trait v1.2.0
+   Compiling widestring v0.5.1
+   Compiling hexf-parse v0.2.1
+   Compiling notify v5.2.0
+   Compiling png v0.17.16
+   Compiling gpu-alloc v0.5.4
+   Compiling hassle-rs v0.9.0
+   Compiling d3d12 v0.6.0
+   Compiling encase_derive_impl v0.5.0
+   Compiling yoke v0.8.0
+   Compiling fxhash v0.2.1
+   Compiling wgpu-types v0.15.2
+   Compiling range-alloc v0.1.4
+   Compiling renderdoc-sys v0.7.1
+   Compiling glow v0.12.3
+   Compiling static_assertions v1.1.0
+   Compiling profiling v1.0.16
+   Compiling zerovec-derive v0.11.1
+   Compiling twox-hash v1.6.3
+   Compiling encase_derive v0.5.0
+   Compiling displaydoc v0.2.5
+   Compiling color_quant v1.1.0
+   Compiling const_panic v0.2.12
+   Compiling image v0.24.9
+   Compiling ruzstd v0.2.4
+   Compiling bevy_encase_derive v0.10.1
+   Compiling bevy_render_macros v0.10.1
+   Compiling ktx2 v0.3.0
+   Compiling ttf-parser v0.25.1
+   Compiling windows-result v0.2.0
+   Compiling radsort v0.1.1
+   Compiling writeable v0.6.1
+   Compiling accesskit v0.10.1
+   Compiling smallvec v1.15.0
+   Compiling hashbrown v0.12.3
+   Compiling glam v0.23.0
+   Compiling erased-serde v0.3.31
+   Compiling bitflags v2.9.1
+   Compiling zerovec v0.11.2
+   Compiling tracing-subscriber v0.3.19
+   Compiling parking_lot v0.12.4
+   Compiling bevy_utils v0.10.1
+   Compiling gpu-descriptor-types v0.1.2
+   Compiling ab_glyph_rasterizer v0.1.8
+   Compiling gpu-descriptor v0.2.4
+   Compiling litemap v0.8.0
+   Compiling windows-strings v0.1.0
+   Compiling zerotrie v0.2.2
+   Compiling windows-implement v0.58.0
+   Compiling naga v0.11.1
+   Compiling windows-interface v0.58.0
+   Compiling tinystr v0.8.1
+   Compiling potential_utf v0.1.2
+   Compiling bevy_math v0.10.1
+   Compiling gpu-allocator v0.22.0
+   Compiling hexasphere v8.1.0
+   Compiling encase v0.5.0
+   Compiling bevy_mikktspace v0.10.1
+   Compiling owned_ttf_parser v0.25.0
+   Compiling icu_locale_core v2.0.0
+   Compiling windows-result v0.1.2
+   Compiling icu_properties_data v2.0.1
+   Compiling cfg_aliases v0.1.1
+   Compiling ab_glyph v0.2.29
+   Compiling bevy_reflect v0.10.1
+   Compiling icu_normalizer_data v2.0.0
+   Compiling serde_json v1.0.140
+   Compiling paste v1.0.15
+   Compiling windows-core v0.54.0
+   Compiling winit v0.28.7
+   Compiling windows-core v0.58.0
+   Compiling icu_collections v2.0.0
+   Compiling euclid v0.22.11
+   Compiling approx v0.5.1
+   Compiling slotmap v1.0.7
+   Compiling itoa v1.0.15
+   Compiling svg_fmt v0.4.5
+   Compiling icu_provider v2.0.0
+   Compiling percent-encoding v2.3.1
+   Compiling tinyvec_macros v0.1.1
+   Compiling cpal v0.15.3
+   Compiling inflections v1.1.1
+   Compiling ryu v1.0.20
+   Compiling windows v0.58.0
+   Compiling gltf-derive v1.4.1
+   Compiling tinyvec v1.9.0
+   Compiling windows v0.54.0
+   Compiling bevy_ecs v0.10.1
+   Compiling guillotiere v0.6.2
+   Compiling accesskit_consumer v0.14.1
+   Compiling ogg v0.8.0
+   Compiling dasp_sample v0.11.0
+   Compiling rectangle-pack v0.4.2
+   Compiling xi-unicode v0.3.0
+   Compiling gilrs v0.10.10
+   Compiling base64 v0.21.7
+   Compiling lewton v0.10.2
+   Compiling glyph_brush_layout v0.2.4
+   Compiling accesskit_windows v0.13.2
+   Compiling gilrs-core v0.5.15
+   Compiling icu_normalizer v2.0.0
+   Compiling ron v0.8.1
+   Compiling gltf-json v1.4.1
+   Compiling icu_properties v2.0.1
+   Compiling fnv v1.0.7
+   Compiling vec_map v0.8.2
+   Compiling base64 v0.13.1
+   Compiling wgpu-hal v0.15.4
+   Compiling taffy v0.3.19
+   Compiling utf8_iter v1.0.4
+   Compiling form_urlencoded v1.2.1
+   Compiling ecolor v0.21.0
+   Compiling idna_adapter v1.2.1
+   Compiling idna v1.0.3
+   Compiling emath v0.21.0
+   Compiling accesskit_winit v0.12.4
+   Compiling crossbeam-epoch v0.9.18
+   Compiling nohash-hasher v0.2.0
+   Compiling byteorder-lite v0.1.0
+   Compiling error-code v3.3.2
+   Compiling rayon-core v1.12.1
+   Compiling clipboard-win v5.4.0
+   Compiling epaint v0.21.0
+   Compiling gltf v1.4.1
+   Compiling crossbeam-deque v0.8.6
+   Compiling image v0.25.6
+   Compiling url v2.5.4
+   Compiling ppv-lite86 v0.2.21
+   Compiling rand_core v0.6.4
+   Compiling webbrowser v0.8.15
+   Compiling rand_chacha v0.3.1
+   Compiling either v1.15.0
+   Compiling arboard v3.5.0
+   Compiling egui v0.21.0
+   Compiling rand v0.8.5
+   Compiling rayon v1.10.0
+   Compiling bevy_app v0.10.1
+   Compiling bevy_core v0.10.1
+   Compiling bevy_log v0.10.1
+   Compiling bevy_time v0.10.1
+   Compiling bevy_hierarchy v0.10.1
+   Compiling bevy_diagnostic v0.10.1
+   Compiling bevy_input v0.10.1
+   Compiling bevy_asset v0.10.1
+   Compiling bevy_transform v0.10.1
+   Compiling wgpu-core v0.15.1
+   Compiling bevy_window v0.10.1
+   Compiling bevy_a11y v0.10.1
+   Compiling rodio v0.17.3
+   Compiling bevy_animation v0.10.1
+   Compiling bevy_winit v0.10.1
+   Compiling bevy_gilrs v0.10.1
+   Compiling bevy_audio v0.10.1
+   Compiling wgpu v0.15.1
+   Compiling bevy_render v0.10.1
+   Compiling bevy_core_pipeline v0.10.1
+   Compiling bevy_scene v0.10.1
+   Compiling bevy_sprite v0.10.1
+   Compiling bevy_pbr v0.10.1
+   Compiling bevy_text v0.10.1
+   Compiling bevy_ui v0.10.1
+   Compiling bevy_gltf v0.10.1
+   Compiling bevy_internal v0.10.1
+   Compiling bevy v0.10.1
+   Compiling bevy_egui v0.20.3
+   Compiling ai_simulation_v2 v0.1.0 (C:\Users\schro\AI_Simulation)
+error[E0412]: cannot find type `AppExit` in this scope
+   --> src\main.rs:521:27
+    |
+521 |     mut exit: EventWriter<AppExit>,
+    |                           ^^^^^^^ not found in this scope
+    |
+help: consider importing this struct
+    |
+4   + use bevy::app::AppExit;
+    |
+
+error[E0425]: cannot find value `AppExit` in this scope
+   --> src\main.rs:534:19
+    |
+534 |         exit.send(AppExit);
+    |                   ^^^^^^^ not found in this scope
+    |
+help: consider importing this unit struct
+    |
+4   + use bevy::app::AppExit;
+    |
+
+error[E0277]: the trait bound `(..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...): Bundle` is not satisfied
+   --> src\main.rs:118:24
+    |
+118 |           commands.spawn((
+    |  __________________-----_^
+    | |                  |
+    | |                  required by a bound introduced by this call
+119 | |             SpriteBundle {
+120 | |                 sprite: Sprite {
+121 | |                     color,
+...   |
+134 | |             ai_entity.parent_lineage,
+135 | |         ));
+    | |_________^ unsatisfied trait bound
+    |
+    = help: the trait `bevy::prelude::Component` is not implemented for `(..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...)`
+    = help: the following other types implement trait `bevy::prelude::Component`:
+              AIEntity
+              AILineage
+              AIType
+              Aabb
+              AccessibilityNode
+              Adaptability
+              AlphaMode
+              Anchor
+            and 133 others
+    = note: required for `(..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...)` to implement `Bundle`
+note: required by a bound in `bevy::prelude::Commands::<'w, 's>::spawn`
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bevy_ecs-0.10.1\src\system\commands\mod.rs:256:25
+    |
+256 |     pub fn spawn<'a, T: Bundle>(&'a mut self, bundle: T) -> EntityCommands<'w, 's, 'a> {
+    |                         ^^^^^^ required by this bound in `Commands::<'w, 's>::spawn`
+    = note: the full name for the type has been written to 'C:\Users\schro\AI_Simulation\target\release\deps\ai_simulation_v2.long-type-14417807042340925200.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `(..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...): Bundle` is not satisfied
+   --> src\main.rs:338:24
+    |
+338 |           commands.spawn((
+    |  __________________-----_^
+    | |                  |
+    | |                  required by a bound introduced by this call
+339 | |             SpriteBundle {
+340 | |                 sprite: Sprite {
+341 | |                     color,
+...   |
+351 | |             IsAlive(true), IndividualAI, ai_entity.parent_lineage,
+352 | |         ));
+    | |_________^ unsatisfied trait bound
+    |
+    = help: the trait `bevy::prelude::Component` is not implemented for `(..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...)`
+    = help: the following other types implement trait `bevy::prelude::Component`:
+              AIEntity
+              AILineage
+              AIType
+              Aabb
+              AccessibilityNode
+              Adaptability
+              AlphaMode
+              Anchor
+            and 133 others
+    = note: required for `(..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...)` to implement `Bundle`
+note: required by a bound in `bevy::prelude::Commands::<'w, 's>::spawn`
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bevy_ecs-0.10.1\src\system\commands\mod.rs:256:25
+    |
+256 |     pub fn spawn<'a, T: Bundle>(&'a mut self, bundle: T) -> EntityCommands<'w, 's, 'a> {
+    |                         ^^^^^^ required by this bound in `Commands::<'w, 's>::spawn`
+    = note: the full name for the type has been written to 'C:\Users\schro\AI_Simulation\target\release\deps\ai_simulation_v2.long-type-14417807042340925200.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0308]: mismatched types
+   --> src\main.rs:428:20
+    |
+428 |             if let Ok((_entity, mut sprite, mut transform)) = monoculture_query.single_mut() {
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   ------------------------------ this expression has type `(Entity, Mut<'_, Sprite>, Mut<'_, Transform>)`
+    |                    |
+    |                    expected `(Entity, Mut<'_, Sprite>, Mut<'_, ...>)`, found `Result<_, _>`
+    |
+    = note: expected tuple `(bevy::prelude::Entity, Mut<'_, bevy::prelude::Sprite>, Mut<'_, bevy::prelude::Transform>)`
+                found enum `Result<_, _>`
+    = note: the full name for the type has been written to 'C:\Users\schro\AI_Simulation\target\release\deps\ai_simulation_v2.long-type-2190910930125685159.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0308]: mismatched types
+   --> src\main.rs:447:23
+    |
+447 |         } else if let Ok((entity, _, _)) = monoculture_query.single() {
+    |                       ^^^^^^^^^^^^^^^^^^   -------------------------- this expression has type `(bevy::prelude::Entity, &bevy::prelude::Sprite, &bevy::prelude::Transform)`
+    |                       |
+    |                       expected `(Entity, &Sprite, &Transform)`, found `Result<_, _>`
+    |
+    = note: expected tuple `(bevy::prelude::Entity, &bevy::prelude::Sprite, &bevy::prelude::Transform)`
+                found enum `Result<_, _>`
+
+error[E0308]: mismatched types
+   --> src\main.rs:450:19
+    |
+450 |     } else if let Ok((entity, _, _)) = monoculture_query.single() {
+    |                   ^^^^^^^^^^^^^^^^^^   -------------------------- this expression has type `(bevy::prelude::Entity, &bevy::prelude::Sprite, &bevy::prelude::Transform)`
+    |                   |
+    |                   expected `(Entity, &Sprite, &Transform)`, found `Result<_, _>`
+    |
+    = note: expected tuple `(bevy::prelude::Entity, &bevy::prelude::Sprite, &bevy::prelude::Transform)`
+                found enum `Result<_, _>`
+
+error[E0308]: mismatched types
+   --> src\main.rs:462:16
+    |
+462 |         if let Ok((_entity, mut sprite, mut transform)) = godai_query.single_mut() {
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   ------------------------ this expression has type `(Entity, Mut<'_, Sprite>, Mut<'_, Transform>)`
+    |                |
+    |                expected `(Entity, Mut<'_, Sprite>, Mut<'_, ...>)`, found `Result<_, _>`
+    |
+    = note: expected tuple `(bevy::prelude::Entity, Mut<'_, bevy::prelude::Sprite>, Mut<'_, bevy::prelude::Transform>)`
+                found enum `Result<_, _>`
+    = note: the full name for the type has been written to 'C:\Users\schro\AI_Simulation\target\release\deps\ai_simulation_v2.long-type-18218028529366354290.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0308]: mismatched types
+   --> src\main.rs:481:19
+    |
+481 |     } else if let Ok((entity, _, _)) = godai_query.single() {
+    |                   ^^^^^^^^^^^^^^^^^^   -------------------- this expression has type `(bevy::prelude::Entity, &bevy::prelude::Sprite, &bevy::prelude::Transform)`
+    |                   |
+    |                   expected `(Entity, &Sprite, &Transform)`, found `Result<_, _>`
+    |
+    = note: expected tuple `(bevy::prelude::Entity, &bevy::prelude::Sprite, &bevy::prelude::Transform)`
+                found enum `Result<_, _>`
+
+error[E0277]: the trait bound `EguiPlugin: bevy::prelude::PluginGroup` is not satisfied
+   --> src\main.rs:549:22
+    |
+549 |         .add_plugins(EguiPlugin)
+    |          ----------- ^^^^^^^^^^ the trait `bevy::prelude::PluginGroup` is not implemented for `EguiPlugin`
+    |          |
+    |          required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `bevy::prelude::PluginGroup`:
+              MinimalPlugins
+              NoopPluginGroup
+              PluginGroupBuilder
+              bevy::DefaultPlugins
+note: required by a bound in `bevy::prelude::App::add_plugins`
+   --> C:\Users\schro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bevy_app-0.10.1\src\app.rs:840:27
+    |
+840 |     pub fn add_plugins<T: PluginGroup>(&mut self, group: T) -> &mut Self {
+    |                           ^^^^^^^^^^^ required by this bound in `App::add_plugins`
+
+Some errors have detailed explanations: E0277, E0308, E0412, E0425.
+For more information about an error, try `rustc --explain E0277`.
+error: could not compile `ai_simulation_v2` (bin "ai_simulation_v2") due to 10 previous errors
+
+C:\Users\schro\AI_Simulation>
