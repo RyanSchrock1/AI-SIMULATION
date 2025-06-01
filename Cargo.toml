@@ -1,0 +1,22 @@
+[package]
+name = "ai_simulation_v2"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8.5"
+uuid = { version = "1.8.0", features = ["v4"] }
+rayon = "1.10.0"
+
+# Bevy Engine for visualization
+# For Bevy 0.16.1, DefaultPlugins brings in most necessary rendering features.
+# Explicitly adding sub-crates for bundles that are causing "unresolved import" issues.
+bevy = "0.16.1"
+bevy_egui = "0.34.1"
+egui = "0.31.1"
+
+# Explicitly add these sub-crates if DefaultPlugins doesn't resolve them correctly.
+# This ensures SpriteBundle and Camera2dBundle are available.
+bevy_sprite = "0.16.1"
+bevy_core_pipeline = "0.16.1"
+# bevy_color = "0.16.2" # This one is usually covered by DefaultPlugins, keep commented unless Color errors appear.
